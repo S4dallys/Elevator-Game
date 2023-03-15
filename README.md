@@ -1,4 +1,7 @@
-# Elevator-Game
-Team BillySchmidht's GH Repo
-wet cat
-wet cat
+## Elevator-Game  
+Team BillySchmidht's GH Repo  
+
+# NOTES  
+
+# DEPENDENCIES  
+
