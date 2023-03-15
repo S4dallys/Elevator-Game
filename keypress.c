@@ -1,5 +1,5 @@
-#include "src/keypress.h"
-#include "src/coordinates.h"
+#include "keypress.h"
+#include "coordinates.h"
 #include <stdio.h>
 
 /*
