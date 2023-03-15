@@ -43,7 +43,6 @@ int isValidMove(char ground[][COL], int x, int y, char key)
             }
             break;
     }
-    printf("I didn't allow wasd\n");
     return 0;
 }
 
