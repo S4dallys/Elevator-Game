@@ -1,6 +1,5 @@
-#include "src/keypress.h"
 #include "src/coordinates.h"
-#include <stdio.h>
+#include "src/keypress.h"
 
 /*
 @param [currentCoord] the current coord BEFORE keypress

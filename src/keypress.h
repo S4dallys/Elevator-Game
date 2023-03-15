@@ -1,3 +1,5 @@
+typedef char KEY;
+
 #define W_KEY 'w'
 #define A_KEY 'a'
 #define S_KEY 's'
