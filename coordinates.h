@@ -6,4 +6,10 @@ typedef struct COORD
     int col;
 } COORD;
 
+typedef struct SIZE
+{
+    int width;
+    int height;
+} SIZE;
+
 COORD getNextCoordinate(COORD currentCoord, KEY key);
