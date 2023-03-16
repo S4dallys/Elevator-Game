@@ -8,6 +8,7 @@
 #define ROOM1_2 1
 
 // structs and aliases
+
 typedef int TXTFILE;
 
 typedef struct ROOM
@@ -19,4 +20,5 @@ typedef struct ROOM
 } ROOM, ELEVATOR_ROOM, SECRET_ROOM;
 
 // func prototypes
-ROOM createRoom(TXTFILE id, TXTFILE objrules, int floor, int roomNo, DIM dim);
+
+ROOM createRoom(TXTFILE id, int floor, int roomNo, DIM dim);

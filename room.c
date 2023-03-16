@@ -2,7 +2,7 @@
 #include "room.h"
 
 /*
-@param [file] relative path of file
+@param [id] room code, see maros:
 @param [floor] floor number
 @param [roomNo] room number
 @param [dim] dimensions of room

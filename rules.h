@@ -3,11 +3,24 @@
 #include "dim.h"
 #include "bool.h"
 
+// rule types
+
+#define DOOR 0
+#define SCR_DOOR 1
+#define NORMAL 2
+#define ITEM 3
+#define ELEVATOR 4
+#define DEATH 5
+
+
+typedef int R_TYPE;
+
 typedef struct RULE
 {
     BOOL isEnabled;
     DIM dim;
     COLOR color;
+    R_TYPE ruleType;
 } RULE;
 
 typedef RULE RULEARRAY[50];
