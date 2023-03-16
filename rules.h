@@ -10,6 +10,8 @@ typedef struct RULE
     COLOR color;
 } RULE;
 
+typedef RULE RULEARRAY[50];
+
 void setColor(RULE *rule, COLOR color);
 RULE createRule(DIM dim, COLOR color);
 void disableRule(RULE *rule);

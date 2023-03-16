@@ -8,11 +8,11 @@
 @param [dim] dimensions of room
 @return returns ROOM class
 */
-ROOM createRoom(STRING_10 file, int floor, int roomNo, OBJECT dim)
+ROOM createRoom(TXTFILE id, int floor, int roomNo, DIM dim)
 {
     ROOM room = {0};
 
-    strcpy(room.file, file);
+    room.id = id;
     room.floor = floor;
     room.roomNo = roomNo;
     room.dim = dim;

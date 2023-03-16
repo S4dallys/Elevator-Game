@@ -1,18 +1,22 @@
 // includes
 #include "file.h"
-#include "object.h"
+#include "rules.h"
 #include "global.h"
 
-// macros
+// room ids
+#define ROOM1_1 0
+#define ROOM1_2 1
 
 // structs and aliases
+typedef int TXTFILE;
+
 typedef struct ROOM
 {
-    STRING_10 file;
+    TXTFILE id;
     int floor;
     int roomNo;
     DIM dim;
 } ROOM, ELEVATOR_ROOM, SECRET_ROOM;
 
 // func prototypes
-ROOM createRoom(STRING_10 file, int floor, int roomNo, OBJECT dim);
+ROOM createRoom(TXTFILE id, TXTFILE objrules, int floor, int roomNo, DIM dim);

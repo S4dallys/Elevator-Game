@@ -76,5 +76,6 @@
 
 //Reset
 #define reset "\e[0m"
+#define DEF "\e[0;37m"
 #define CRESET "\e[0m"
 #define COLOR_RESET "\e[0m"
