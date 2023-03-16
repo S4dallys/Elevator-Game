@@ -1,4 +1,4 @@
-#include "coordinates.h"
+#include "dim.h"
 #include "keypress.h"
 
 /*

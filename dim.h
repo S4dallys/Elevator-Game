@@ -12,4 +12,10 @@ typedef struct SIZE
     int height;
 } SIZE;
 
+typedef struct DIM
+{
+    COORD coord;
+    SIZE size;
+} DIM;
+
 COORD getNextCoordinate(COORD currentCoord, KEY key);

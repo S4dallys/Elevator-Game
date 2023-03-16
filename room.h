@@ -1,5 +1,4 @@
 // includes
-#include <stdio.h>
 #include "file.h"
 #include "object.h"
 #include "global.h"

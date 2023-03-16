@@ -1,3 +1,4 @@
-#define Fr RED "M" reset
+#include "ansi.h"
 
+typedef char COLOR[10];
 

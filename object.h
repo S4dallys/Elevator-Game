@@ -1,7 +1,9 @@
+#include "rules.h"
 #include "coordinates.h"
+#include "E_string.h"
 
 typedef struct OBJECT
 {
-    COORD coord;
-    SIZE size;
-} OBJECT, ELEVATOR, DIM;
+    DIM dim;
+    RULE rules[5];
+} OBJECT;

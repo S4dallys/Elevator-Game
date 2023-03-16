@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "keypress.h": "c"
+        "keypress.h": "c",
+        "e_string.h": "c",
+        "color.h": "c"
     }
 }
