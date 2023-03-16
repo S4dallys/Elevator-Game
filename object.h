@@ -1,5 +1,5 @@
 #include "rules.h"
-#include "coordinates.h"
+#include "dim.h"
 #include "E_string.h"
 
 typedef struct OBJECT
