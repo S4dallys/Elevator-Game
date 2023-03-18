@@ -12,6 +12,7 @@ To run main.c, type into bash:
 
 ## TO INSTALL
 - download zip file in releases
+- extract file to {download location}
 - run these commands in terminal
 ``` 
 cd {download location}\ELEVATOR-GAME
