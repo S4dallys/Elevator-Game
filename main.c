@@ -1,6 +1,9 @@
 #include "main.h"
 
-
+#define CUR_ROOM_PATH "CROOM.txt"
+#define CUR_RULES_PATH "CRULE.txt"
+#define EVENTS_PATH "EVENTS.txt"
+#define DIALOGUE_PATH "dialogue.txt"
 
 
 int main()

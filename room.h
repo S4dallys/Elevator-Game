@@ -17,6 +17,8 @@ typedef struct ROOM
     TXTFILE f_path;
     TXTFILE f_rule;
     DIM dim;
+    DIM ePoints[8];
+    int ePoints_count;
 } ROOM, ELEVATOR_ROOM, SECRET_ROOM;
 
 // func prototypes
