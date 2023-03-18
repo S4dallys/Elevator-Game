@@ -3,6 +3,7 @@
         "keypress.h": "c",
         "e_string.h": "c",
         "color.h": "c",
-        "rules.h": "c"
+        "rules.h": "c",
+        "stdio.h": "c"
     }
 }
