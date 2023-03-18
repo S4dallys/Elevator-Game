@@ -1,5 +1,18 @@
-#include "coordinates.h"
-#include "keypress.h"
+#include "dim.h"
+
+/*
+@param [r] row number
+@param [c] col number
+@param [w] object width
+@param [h] object height
+@return dim class instance
+*/
+DIM createDim(int r, int c, int w, int h) 
+{
+    DIM dim = {(COORD) {r, c}, (SIZE) {w, h}};
+
+    return dim;
+}
 
 /*
 @param [currentCoord] the current coord BEFORE keypress
