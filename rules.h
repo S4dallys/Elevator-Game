@@ -1,3 +1,4 @@
+#include <string.h>
 #include "E_string.h"
 #include "color.h"
 #include "dim.h"
@@ -5,12 +6,13 @@
 
 // rule types
 
-#define DOOR 0
+#define DOOR     0
 #define SCR_DOOR 1
-#define NORMAL 2
-#define ITEM 3
+#define NORMAL   2
+#define ITEM     3
 #define ELEVATOR 4
-#define DEATH 5
+#define DEATH    5
+#define CUSTOM   6
 
 
 typedef int R_TYPE;
@@ -25,7 +27,7 @@ typedef struct RULE
 
 typedef RULE RULEARRAY[50];
 
-void setColor(RULE *rule, COLOR color);
-RULE createRule(DIM dim, COLOR color);
+void setRuleColor(RULE *rule, COLOR color);
+RULE setRule(DIM dim, COLOR color);
 void disableRule(RULE *rule);
 void enableRule(RULE *rule);

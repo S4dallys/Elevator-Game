@@ -1,12 +1,11 @@
 #include "rules.h"
-#include <string.h>
 
 /*
 @param [dim] rule dimensions
 @param [color] rule color
 @return RULE class instance
 */
-RULE createRule(DIM dim, COLOR color)
+RULE setRule(DIM dim, COLOR color)
 {
     RULE rule = {1};
 
@@ -21,7 +20,7 @@ RULE createRule(DIM dim, COLOR color)
 @param [color] color you want to set that rule to
 @return none
 */
-void setColor(RULE *rule, COLOR color)
+void setRuleColor(RULE *rule, COLOR color)
 {
     strcpy(rule->color, color);
 }

@@ -1,2 +1,2 @@
 @echo off
-gcc main.c -Iheaders -o main.exe
+gcc main.c -Iheaders -o main.exe room.c dim.c

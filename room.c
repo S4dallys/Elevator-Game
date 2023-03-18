@@ -1,21 +1,30 @@
-#include <string.h>
 #include "room.h"
+
+#define ROOM1_1 0
+#define ROOM1_2 1
 
 /*
 @param [id] room code, see maros:
-@param [floor] floor number
-@param [roomNo] room number
-@param [dim] dimensions of room
 @return returns ROOM class
 */
-ROOM createRoom(TXTFILE id, int floor, int roomNo, DIM dim)
+ROOM initRoom(int id)
 {
     ROOM room = {0};
 
-    room.id = id;
-    room.floor = floor;
-    room.roomNo = roomNo;
-    room.dim = dim;
+    switch (id)
+    {
+        case ROOM1_1:
+            strcpy(room.f_path, "1-1.txt");
+            strcpy(room.f_rule, "1-1r.txt");
+            room.dim = createDim(TOP, LEFT, 50, 50);
+            break;
+        case ROOM1_2:
+            strcpy(room.f_path, "1-2.txt");
+            strcpy(room.f_path, "1-2.txt");
+            room.dim = createDim(10, 40, 50, 50);
+            break;
+    }
+
 
     return room;
 }
