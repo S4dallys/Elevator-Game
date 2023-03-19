@@ -10,9 +10,21 @@ int main()
     RULEARRAY r_array;
     int n_r_array;
 
+
     initRules(cur_room, r_array, &n_r_array);
 
     printFrame(cur_room, r_array, n_r_array);
+
+    disableRule(&r_array[1]);
+
+    printf("\n");
+    printFrame(cur_room, r_array, n_r_array);
+
+    enableRule(&r_array[1]);
+    printf("\n");
+    printFrame(cur_room, r_array, n_r_array);
+    
+
 
 
 

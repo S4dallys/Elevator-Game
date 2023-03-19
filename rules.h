@@ -40,12 +40,12 @@ typedef struct APRULE
 typedef RULE RULEARRAY[50];
 
 void setRuleColor(RULE *rule, COLOR color);
-// RULE setRule(DIM dim, COLOR color);
+RULE setRule(DIM dim, COLOR color);
 void disableRule(RULE *rule);
 void enableRule(RULE *rule);
 void initRules(ROOM room, RULEARRAY R, int *nR);
 void strToAnsi(COLOR id);
-void applyRules(ROOM room, RULEARRAY R, int nR, TXTFILE CPATH);
 void textColor(COLOR color);
 void resetColor();
 void printFrame(ROOM room, RULEARRAY R, int nR);
+void displayRules(RULEARRAY R, int nR);

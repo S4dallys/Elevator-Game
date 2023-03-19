@@ -25,20 +25,41 @@ void strToAnsi(COLOR color)
     fclose(fstream);
 }
 
+void ansiToStr(COLOR ansi, COLOR buffer)
+{
+    FILE *fstream;
+    fstream = fopen("colors.txt", "r");
+    char color_buffer[20];
+    char ansi_buffer[20];
+
+    int i=0;
+    while (feof(fstream) == 0)
+    {
+        fseek(fstream, 8, SEEK_CUR);
+        fscanf(fstream, "%s %s ", color_buffer, ansi_buffer);
+        if (strcmp(ansi, ansi_buffer) == 0)
+        {
+            strcpy(buffer, color_buffer);
+            break;
+        }
+    }
+    fclose(fstream);
+}
+
 /*
 @param [dim] rule dimensions
 @param [color] rule color
 @return RULE class instance
 */
-// RULE setRule(DIM dim, COLOR color)
-// {
-//     RULE rule = {1};
+RULE setRule(DIM dim, COLOR color)
+{
+    RULE rule = {1};
 
-//     rule.dim = dim;
-//     setColor(&rule, color);
+    rule.dim = dim;
+    setRuleColor(&rule, color);
 
-//     return rule;
-// }
+    return rule;
+}
 
 /*
 @param [*rule] pointer to a RULE class
@@ -69,6 +90,7 @@ void enableRule(RULE *rule)
 }
 
 /*
+INITIALIZE RULEARRAY with rules from rules.txt
 @param [room] current room being rendered
 @param [R] rules array to init rules in
 @return none
@@ -124,6 +146,12 @@ APRULE createAprule(int start, int width, COLOR color)
     return aprule;
 }
 
+/*
+Prints exactly one frame WITH color rules
+@param [room] cur_room instance
+@param [R] rule array associated with room
+@param [nR] no of items in R
+*/
 void printFrame(ROOM room, RULEARRAY R, int nR)
 {
     int line_ind = 0, R_ind = 0, total_rules = 0, buf_ind = 0, rulesbuf_ind = 0;
@@ -138,12 +166,12 @@ void printFrame(ROOM room, RULEARRAY R, int nR)
         total_rules = 0;
         while (R[R_ind].dim.coord.row == line_ind && R_ind < nR)
         {
-            
-            aprule_arr[total_rules++] = createAprule(
-                        R[R_ind].dim.coord.col,
-                        R[R_ind].dim.size.width,
-                        R[R_ind].color
-            );
+            if (R[R_ind].isEnabled) 
+                aprule_arr[total_rules++] = createAprule(
+                            R[R_ind].dim.coord.col,
+                            R[R_ind].dim.size.width,
+                            R[R_ind].color
+                );
 
             R_ind++;
         }
@@ -177,7 +205,35 @@ void printFrame(ROOM room, RULEARRAY R, int nR)
     fclose(fstream);
 }
 
-void applyRules(ROOM room, RULEARRAY R, int nR, TXTFILE CPATH)
+/*
+Can be used to log into another file via > operator
+@param [R] rule array to diaplay
+@param [nR] no of items in R
+@return none
+*/
+void displayRules(RULEARRAY R, int nR)
 {
-    
+    printf("\nIND     ROW  COL WIDTH      COLOR     RULETYPE  EVENTID  ISENABLED\n\n");
+    for (int i=0; i<nR; i++)
+    {
+        printf("%2d.", i);
+
+        printf("     (%-2d, %2d)  (%-2d)", 
+        R[i].dim.coord.row, 
+        R[i].dim.coord.col,
+        R[i].dim.size.width);
+
+        char buffer[13] = {0};
+        ansiToStr(R[i].color, buffer);
+        printf("      ");
+        textColor(R[i].color);
+        printf("%-6s", buffer);
+        resetColor();
+
+        printf("        %d", R[i].ruleType);
+
+        printf("        %d", R[i].eventid);
+
+        printf("        %d\n\n", R[i].isEnabled);
+    }
 }
