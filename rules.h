@@ -40,7 +40,8 @@ typedef struct APRULE
 typedef RULE RULEARRAY[50];
 
 void setRuleColor(RULE *rule, COLOR color);
-RULE setRule(DIM dim, COLOR color);
+RULE setRule(DIM dim, COLOR color, int ruletype, int eventid);
+void addRule(RULE rule, RULEARRAY R, int *nR);
 void disableRule(RULE *rule);
 void enableRule(RULE *rule);
 void initRules(ROOM room, RULEARRAY R, int *nR);
@@ -48,4 +49,4 @@ void strToAnsi(COLOR id);
 void textColor(COLOR color);
 void resetColor();
 void printFrame(ROOM room, RULEARRAY R, int nR);
-void displayRules(RULEARRAY R, int nR);
+void displayRules(RULEARRAY R, int nR, int output);

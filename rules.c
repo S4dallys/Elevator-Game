@@ -51,11 +51,13 @@ void ansiToStr(COLOR ansi, COLOR buffer)
 @param [color] rule color
 @return RULE class instance
 */
-RULE setRule(DIM dim, COLOR color)
+RULE setRule(DIM dim, COLOR color, int ruletype, int eventid)
 {
     RULE rule = {1};
 
     rule.dim = dim;
+    rule.ruleType = ruletype;
+    rule.eventid = eventid;
     setRuleColor(&rule, color);
 
     return rule;
@@ -156,7 +158,7 @@ void printFrame(ROOM room, RULEARRAY R, int nR)
 {
     int line_ind = 0, R_ind = 0, total_rules = 0, buf_ind = 0, rulesbuf_ind = 0;
     char buffer[100] = {0};
-    APRULE aprule_arr[10];
+    APRULE aprule_arr[15];
     FILE *fstream = fopen(room.f_path, "r");
 
     while (feof(fstream) == 0)
@@ -209,9 +211,10 @@ void printFrame(ROOM room, RULEARRAY R, int nR)
 Can be used to log into another file via > operator
 @param [R] rule array to diaplay
 @param [nR] no of items in R
+@param [output] 1 if writing to file, 0 if writing to terminal
 @return none
 */
-void displayRules(RULEARRAY R, int nR)
+void displayRules(RULEARRAY R, int nR, int output)
 {
     printf("\nIND     ROW  COL WIDTH      COLOR     RULETYPE  EVENTID  ISENABLED\n\n");
     for (int i=0; i<nR; i++)
@@ -226,9 +229,14 @@ void displayRules(RULEARRAY R, int nR)
         char buffer[13] = {0};
         ansiToStr(R[i].color, buffer);
         printf("      ");
-        textColor(R[i].color);
+
+        if (!output)
+            textColor(R[i].color);
+
         printf("%-6s", buffer);
-        resetColor();
+
+        if (!output)
+            resetColor();
 
         printf("        %d", R[i].ruleType);
 
@@ -237,3 +245,40 @@ void displayRules(RULEARRAY R, int nR)
         printf("        %d\n\n", R[i].isEnabled);
     }
 }
+
+void swapRules(RULE *a, RULE *b) {
+  RULE temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void sortRules(RULEARRAY R, int nR) {
+    int i;
+    for (int step = 0; step < nR - 1; step++) {
+        int min_idx = step;
+        for (i = step + 1; i < nR; i++) {
+            if (R[i].dim.coord.row < R[min_idx].dim.coord.row)
+                min_idx = i;
+            else if (R[i].dim.coord.row == R[min_idx].dim.coord.row)
+                if (R[i].dim.coord.col < R[min_idx].dim.coord.col)
+                    min_idx = i;
+        }
+        if (min_idx != i)
+            swapRules(&R[min_idx], &R[step]);
+    }
+}
+
+void addRule(RULE rule, RULEARRAY R, int *nR)
+{
+    R[*nR] = rule;
+    *nR = *nR + 1;
+    sortRules(R, *nR);
+}
+
+// copy paste to add rule
+// addRule(
+//         setRule(
+//             createDim(7, 50, 5, 1), YELB,
+//             1, 1
+//         ), r_array, &n_r_array
+//     );
