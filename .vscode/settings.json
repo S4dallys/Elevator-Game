@@ -4,6 +4,7 @@
         "e_string.h": "c",
         "color.h": "c",
         "rules.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "dim.h": "c"
     }
 }

@@ -12,7 +12,9 @@ int main()
 
     initRules(cur_room, r_array, &n_r_array);
 
-    
+    printFrame(cur_room, r_array, n_r_array);
+
+
 
     
 

@@ -3,6 +3,7 @@
 #include "E_string.h"
 #include "room.h"
 #include "bool.h"
+#include "ansi.h"
 
 
 typedef STRING_10 COLOR;
@@ -29,6 +30,13 @@ typedef struct RULE
     int eventid;
 } RULE;
 
+typedef struct APRULE
+{
+    int start;
+    int width;
+    COLOR color;
+} APRULE;
+
 typedef RULE RULEARRAY[50];
 
 void setRuleColor(RULE *rule, COLOR color);
@@ -38,3 +46,6 @@ void enableRule(RULE *rule);
 void initRules(ROOM room, RULEARRAY R, int *nR);
 void strToAnsi(COLOR id);
 void applyRules(ROOM room, RULEARRAY R, int nR, TXTFILE CPATH);
+void textColor(COLOR color);
+void resetColor();
+void printFrame(ROOM room, RULEARRAY R, int nR);
