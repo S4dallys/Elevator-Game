@@ -184,8 +184,11 @@ void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player)
         {
             if (player.dim.coord.row == line_ind && player.dim.coord.col == buf_ind)
             {
-                printf("%c", player.sprite);
-                buf_ind++;
+                if (player.direction)
+                    printf("\\%c", player.sprite);
+                else
+                    printf("%c/", player.sprite);
+                buf_ind = buf_ind + 2;
                 continue;
             }
             if (rulesbuf_ind < total_rules)

@@ -1,5 +1,8 @@
 #include "dim.h"
 
+#define RIGHT 0
+#define LEFT 1
+
 // definitions and sizes
 #define PLAYER_ROWS 1
 #define PLAYER_COLS 2
@@ -16,6 +19,7 @@ typedef struct SPRITE
     DIM dim;
     S_TYPE s_type;
     char sprite;
+    int direction;
 } PLAYER, ENEMY, FRIEND;
 
 PLAYER createPlayer(COORD def_coord);

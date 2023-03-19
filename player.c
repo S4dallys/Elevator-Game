@@ -6,12 +6,12 @@
 */
 PLAYER createPlayer(COORD def_coord)
 {
-    PLAYER player;
+    PLAYER player = {0};
 
     player.dim.coord = def_coord;
     player.dim.size = (SIZE) {1, 1};
     player.s_type = S_PLAYER;
-    player.sprite = 'o';
+    player.sprite = 'O';
 
     return player;
 }

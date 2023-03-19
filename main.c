@@ -22,7 +22,8 @@ int main()
         printFrame(cur_room, r_array, n_r_array, Plr);
         key = getch();
 
-        Plr.dim.coord = getNextCoordinate(Plr.dim.coord, key);
+        Plr.dim.coord = getNextCoordinate(Plr.dim.coord, key, &Plr.direction);
+
     }
     
     
