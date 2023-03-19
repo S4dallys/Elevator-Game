@@ -37,3 +37,4 @@ void disableRule(RULE *rule);
 void enableRule(RULE *rule);
 void initRules(ROOM room, RULEARRAY R, int *nR);
 void strToAnsi(COLOR id);
+void applyRules(ROOM room, RULEARRAY R, int nR, TXTFILE CPATH);

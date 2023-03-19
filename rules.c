@@ -1,5 +1,9 @@
 #include "rules.h"
 
+/*
+@param [id] color code
+@return none
+*/
 void strToAnsi(COLOR id)
 {
     FILE *fstream;
@@ -99,7 +103,12 @@ void initRules(ROOM room, RULEARRAY R, int *nR)
     *nR = i;
 }
 
-void applyRules()
+void applyRule(RULE rule, FILE *source, FILE *dest, char buffer[100], int * offset)
 {
+    
+}
 
+void applyRules(ROOM room, RULEARRAY R, int nR, TXTFILE CPATH)
+{
+    
 }
