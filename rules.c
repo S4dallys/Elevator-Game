@@ -154,7 +154,7 @@ Prints exactly one frame WITH color rules
 @param [R] rule array associated with room
 @param [nR] no of items in R
 */
-void printFrame(ROOM room, RULEARRAY R, int nR)
+void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player)
 {
     int line_ind = 0, R_ind = 0, total_rules = 0, buf_ind = 0, rulesbuf_ind = 0;
     char buffer[100] = {0};
@@ -182,6 +182,12 @@ void printFrame(ROOM room, RULEARRAY R, int nR)
         rulesbuf_ind = 0;
         while (buf_ind<strlen(buffer))
         {
+            if (player.dim.coord.row == line_ind && player.dim.coord.col == buf_ind)
+            {
+                printf("%c", player.sprite);
+                buf_ind++;
+                continue;
+            }
             if (rulesbuf_ind < total_rules)
             {
                 if (aprule_arr[rulesbuf_ind].start == buf_ind)

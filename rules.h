@@ -12,7 +12,7 @@ typedef int R_TYPE;
 // rule types
 
 #define DOOR     0
-#define SCR_DOOR 1
+#define LKD_DOOR 1
 #define NORMAL   2
 #define ITEM     3
 #define ELEVATOR 4
@@ -48,5 +48,5 @@ void initRules(ROOM room, RULEARRAY R, int *nR);
 void strToAnsi(COLOR id);
 void textColor(COLOR color);
 void resetColor();
-void printFrame(ROOM room, RULEARRAY R, int nR);
+void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player);
 void displayRules(RULEARRAY R, int nR, int output);

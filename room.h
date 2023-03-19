@@ -1,7 +1,7 @@
 // includes
 #include <string.h>
 #include <stdio.h>
-#include "dim.h"
+#include "player.h"
 #include "E_string.h"
 
 

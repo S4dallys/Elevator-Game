@@ -10,34 +10,20 @@ int main()
     RULEARRAY r_array;
     int n_r_array;
 
+    PLAYER Plr = createPlayer((COORD) {2, 2});
 
     initRules(cur_room, r_array, &n_r_array);
 
 
+    char key;
+    while(key != 'x')
+    {
+        system("cls");
+        printFrame(cur_room, r_array, n_r_array, Plr);
+        key = getch();
 
-    addRule(
-        setRule(
-            createDim(7, 50, 5, 1), YELB,
-            1, 1
-        ), r_array, &n_r_array
-    );
-
-    addRule(
-        setRule(
-            createDim(7, 12, 2, 1), MAGHB,
-            1, 1
-        ), r_array, &n_r_array
-    );
-
-    printFrame(cur_room, r_array, n_r_array);
-
-    printf("\n");
-    disableRule(&r_array[7]);
-
-    printFrame(cur_room, r_array, n_r_array);
-
-
-    // displayRules(r_array, n_r_array, 0);
+        Plr.dim.coord = getNextCoordinate(Plr.dim.coord, key);
+    }
     
     
 

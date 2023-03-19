@@ -27,21 +27,41 @@ COORD getNextCoordinate(COORD currentCoord, KEY key)
     switch (key)
     {
         case W_KEY:
-            nextCoord.row = currentCoord.row - 1;
+            nextCoord.row = currentCoord.row - 2;
             nextCoord.col = currentCoord.col;
             break;
         case A_KEY:
             nextCoord.row = currentCoord.row;
-            nextCoord.col = currentCoord.col - 1;
+            nextCoord.col = currentCoord.col - 2;
             break;
         case S_KEY:
-            nextCoord.row = currentCoord.row + 1;
+            nextCoord.row = currentCoord.row + 2;
             nextCoord.col = currentCoord.col;
             break;
         case D_KEY:
             nextCoord.row = currentCoord.row;
-            nextCoord.col = currentCoord.col + 1;
+            nextCoord.col = currentCoord.col + 2;
             break;
+
+        case W_KEY_SHF:
+            nextCoord.row = currentCoord.row - 4;
+            nextCoord.col = currentCoord.col;
+            break;
+        case A_KEY_SHF:
+            nextCoord.row = currentCoord.row;
+            nextCoord.col = currentCoord.col - 8;
+            break;
+        case S_KEY_SHF:
+            nextCoord.row = currentCoord.row + 4;
+            nextCoord.col = currentCoord.col;
+            break;
+        case D_KEY_SHF:
+            nextCoord.row = currentCoord.row;
+            nextCoord.col = currentCoord.col + 8;
+            break;
+
+        default:
+            nextCoord = currentCoord;
     }
 
     return nextCoord;

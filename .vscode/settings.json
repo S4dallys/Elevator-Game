@@ -5,6 +5,9 @@
         "color.h": "c",
         "rules.h": "c",
         "stdio.h": "c",
-        "dim.h": "c"
+        "dim.h": "c",
+        "player.h": "c",
+        "room.h": "c",
+        "string.h": "c"
     }
 }
