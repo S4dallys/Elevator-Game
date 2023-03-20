@@ -13,10 +13,11 @@ typedef STRING_10 COLOR;
 #define NORMAL   0
 #define DOOR     1
 #define LKD_DOOR 2
-#define ITEM     3
+// #define ITEM     3
 #define ELEVATOR 4
 #define DEATH    5
 #define CUSTOM   6
+#define NONE     7
 
 
 

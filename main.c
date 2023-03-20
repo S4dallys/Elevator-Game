@@ -16,7 +16,12 @@ int main()
 
     displayRules(r_array, n_r_array, 0);
 
-    setRuleCh(&r_array[0], '`');
+
+
+
+    // displayRules(r_array, n_r_array, 0);
+
+    // setRuleCh(&r_array[0], '`');
 
 
 
@@ -33,6 +38,7 @@ int main()
 
         if (key == 'g') disableAllRules(r_array, n_r_array);
         else if (key == 'h') enableAllRules(r_array, n_r_array);
+        else if (key == 'y') cur_room = initRoom(ROOM1_2);
 
         Plr.dim.coord = getNextCoordinate(Plr.dim.coord, key, &Plr.direction);
 

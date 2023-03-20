@@ -37,7 +37,7 @@ ROOM initRoom(int id)
         
         case ROOM1_2:
             createRoom(&room,
-                "1-2.txt", "1-2r.txt",
+                "1-2.txt", "1-1r.txt",
                 createDim(10, 40, 50, 50), 3
             );
             room.ePoints[0] = createDim(1, 1, 1, 1);

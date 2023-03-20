@@ -147,7 +147,7 @@ void initRules(ROOM room, RULEARRAY R, int *nR)
 
     while (feof(fstream) == 0)
     {
-        fscanf(fstream, "%d %d %d %d %s %d %d %c", 
+        fscanf(fstream, "%d %d %d %d %s %d %d %d %c ", 
             &rule.dim.coord.row,
             &rule.dim.coord.col,
             &rule.dim.size.width,
@@ -155,6 +155,7 @@ void initRules(ROOM room, RULEARRAY R, int *nR)
             colorid,
             &rule.colType,
             &rule.eventid,
+            &rule.isEnabled,
             &rule.ch);
 
         strToAnsi(colorid);
