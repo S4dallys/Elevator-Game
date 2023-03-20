@@ -16,12 +16,19 @@ int main()
 
     displayRules(r_array, n_r_array, 0);
 
+    setRuleCh(&r_array[0], '`');
+
+
 
     char key;
+    int i = 0;
     while(key != 'x')
     {
+        i = !i;
         system("cls");
+        textColor(i ? RED : MAG);
         printFrame(cur_room, r_array, n_r_array, Plr);
+        resetColor();
         key = getch();
 
         if (key == 'g') disableAllRules(r_array, n_r_array);

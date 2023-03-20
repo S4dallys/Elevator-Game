@@ -243,7 +243,8 @@ void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player)
                     for (int i=0; i<aprule_arr[rulesbuf_ind].width; i++)
                     {
                         if (aprule_arr[rulesbuf_ind].colType == CUSTOM)
-                            printf("%c", aprule_arr[rulesbuf_ind].ch);
+                            printf("%c", (aprule_arr[rulesbuf_ind].ch != '`')
+                            ? aprule_arr[rulesbuf_ind].ch : ' ');
                         else
                             printf("%c", buffer[buf_ind]);
                         buf_ind++;
