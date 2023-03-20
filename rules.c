@@ -1,5 +1,26 @@
 #include "rules.h"
 
+void setRuleColType(RULE *rule, int colType)
+{
+    rule->colType = colType;
+}
+
+void setRuleCh(RULE *rule, char ch)
+{
+    rule->ch = ch;
+}
+
+void setAllRulesTo(RULEARRAY R, int nR, COLOR color, int colType, char ch)
+{
+    int i;
+    for (i=0; i<nR; i++)
+    {
+        strcpy(R[i].color, color);
+        R[i].colType = colType;
+        R[i].ch = ch;
+    }
+}
+
 /*
 @param [color] color code
 @return none
@@ -51,17 +72,17 @@ void ansiToStr(COLOR ansi, COLOR buffer)
 @param [color] rule color
 @return RULE class instance
 */
-RULE setRule(DIM dim, COLOR color, int ruletype, int eventid)
-{
-    RULE rule = {1};
+// RULE setRule(DIM dim, COLOR color, int ruletype, int eventid)
+// {
+//     RULE rule = {1};
 
-    rule.dim = dim;
-    rule.ruleType = ruletype;
-    rule.eventid = eventid;
-    setRuleColor(&rule, color);
+//     rule.dim = dim;
+//     rule.ruleType = ruletype;
+//     rule.eventid = eventid;
+//     setRuleColor(&rule, color);
 
-    return rule;
-}
+//     return rule;
+// }
 
 /*
 @param [*rule] pointer to a RULE class
@@ -91,6 +112,24 @@ void enableRule(RULE *rule)
     rule->isEnabled = 1;
 }
 
+void disableAllRules(RULEARRAY R, int nR)
+{
+    int i;
+    for (i=0; i<nR; i++)
+    {
+        disableRule(&R[i]);
+    }
+}
+
+void enableAllRules(RULEARRAY R, int nR)
+{
+    int i;
+    for (i=0; i<nR; i++)
+    {
+        enableRule(&R[i]);
+    }
+}
+
 /*
 INITIALIZE RULEARRAY with rules from rules.txt
 @param [room] current room being rendered
@@ -108,14 +147,15 @@ void initRules(ROOM room, RULEARRAY R, int *nR)
 
     while (feof(fstream) == 0)
     {
-        fscanf(fstream, "%d %d %d %d %s %d %d ", 
+        fscanf(fstream, "%d %d %d %d %s %d %d %c", 
             &rule.dim.coord.row,
             &rule.dim.coord.col,
             &rule.dim.size.width,
             &rule.dim.size.height,
             colorid,
-            &rule.ruleType,
-            &rule.eventid);
+            &rule.colType,
+            &rule.eventid,
+            &rule.ch);
 
         strToAnsi(colorid);
         strcpy(rule.color, colorid);
@@ -137,13 +177,15 @@ void resetColor()
     printf("\e[0m");
 }
 
-APRULE createAprule(int start, int width, COLOR color)
+APRULE createAprule(int start, int width, COLOR color, int colType, char ch)
 {
     APRULE aprule = {0};
 
     aprule.start = start;
     aprule.width = width;
     strcpy(aprule.color, color);
+    aprule.colType = colType;
+    aprule.ch = ch;
 
     return aprule;
 }
@@ -172,7 +214,9 @@ void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player)
                 aprule_arr[total_rules++] = createAprule(
                             R[R_ind].dim.coord.col,
                             R[R_ind].dim.size.width,
-                            R[R_ind].color
+                            R[R_ind].color,
+                            R[R_ind].colType,
+                            R[R_ind].ch
                 );
 
             R_ind++;
@@ -198,7 +242,10 @@ void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player)
                     textColor(aprule_arr[rulesbuf_ind].color);
                     for (int i=0; i<aprule_arr[rulesbuf_ind].width; i++)
                     {
-                        printf("%c", buffer[buf_ind]);
+                        if (aprule_arr[rulesbuf_ind].colType == CUSTOM)
+                            printf("%c", aprule_arr[rulesbuf_ind].ch);
+                        else
+                            printf("%c", buffer[buf_ind]);
                         buf_ind++;
                     }
                     resetColor();
@@ -225,7 +272,7 @@ Can be used to log into another file via > operator
 */
 void displayRules(RULEARRAY R, int nR, int output)
 {
-    printf("\nIND     ROW  COL WIDTH      COLOR     RULETYPE  EVENTID  ISENABLED\n\n");
+    printf("\nIND     ROW  COL WIDTH      COLOR     COLTYPE  EVENTID  CHAR  ISENABLED\n\n");
     for (int i=0; i<nR; i++)
     {
         printf("%2d.", i);
@@ -247,9 +294,19 @@ void displayRules(RULEARRAY R, int nR, int output)
         if (!output)
             resetColor();
 
-        printf("        %d", R[i].ruleType);
+        printf("       %d", R[i].colType);
 
         printf("        %d", R[i].eventid);
+
+        if (R[i].colType == 6 || output)
+            printf("      %c", R[i].ch);
+        else
+        {
+            printf("      ");
+            textColor(BLK);
+            printf("%c", R[i].ch);
+            resetColor();
+        }
 
         printf("        %d\n\n", R[i].isEnabled);
     }
@@ -277,12 +334,12 @@ void sortRules(RULEARRAY R, int nR) {
     }
 }
 
-void addRule(RULE rule, RULEARRAY R, int *nR)
-{
-    R[*nR] = rule;
-    *nR = *nR + 1;
-    sortRules(R, *nR);
-}
+// void addRule(RULE rule, RULEARRAY R, int *nR)
+// {
+//     R[*nR] = rule;
+//     *nR = *nR + 1;
+//     sortRules(R, *nR);
+// }
 
 // copy paste to add rule
 // addRule(
