@@ -6,13 +6,16 @@
 ROOM createRoom(ROOM * R,
                 TXTFILE f_path,
                 TXTFILE f_rule,
+                int f_default,
                 DIM dim,
-                int ePoints_count)
+                COORD default_pos
+                )
 {
     strcpy(R->f_path, f_path);
     strcpy(R->f_rule, f_rule);
+    R->f_default = f_default;
     R->dim = dim;
-    R->ePoints_count = ePoints_count;
+    R->default_pos = default_pos;
 }
 
 /*
@@ -27,22 +30,18 @@ ROOM initRoom(int id)
     {
         case ROOM1_1:
             createRoom(&room,
-                "1-1.txt", "1-1r.txt",
-                createDim(10, 40, 50, 50), 3
+                "./maps/1-1.txt", "./maps/1-1r.txt", ROOM1_1,
+                createDim(10, 40, 50, 50), 
+                (COORD) {2, 2}
             );
-            room.ePoints[0] = createDim(1, 1, 1, 1);
-            room.ePoints[1] = createDim(1, 1, 1, 1);
-            room.ePoints[2] = createDim(1, 1, 1, 1);
             break;
         
         case ROOM1_2:
             createRoom(&room,
-                "1-2.txt", "1-1r.txt",
-                createDim(10, 40, 50, 50), 3
+                "./maps/1-2.txt", "./maps/1-2r.txt", ROOM1_1,
+                createDim(10, 40, 50, 50),
+                (COORD) {2, 2}
             );
-            room.ePoints[0] = createDim(1, 1, 1, 1);
-            room.ePoints[1] = createDim(1, 1, 1, 1);
-            room.ePoints[2] = createDim(1, 1, 1, 1);
             break;
     }
 

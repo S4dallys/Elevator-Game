@@ -16,10 +16,9 @@ typedef struct ROOM
 {
     TXTFILE f_path;
     TXTFILE f_rule;
+    int f_default;
     DIM dim;
-    DIM ePoints[8];
-    int ePoints_count;
+    COORD default_pos;
 } ROOM, ELEVATOR_ROOM, SECRET_ROOM;
 
-// func prototypes
 ROOM initRoom(int id);

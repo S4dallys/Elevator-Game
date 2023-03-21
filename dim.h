@@ -1,5 +1,16 @@
 #include "keypress.h"
 
+#define RIGHT 0
+#define LEFT 1
+#define TOP 0
+#define BOTTOM 1
+
+#define ROW_SHF_SIZE 3
+#define COL_SHF_SIZE 6
+
+#define ROW_SIZE 1
+#define COL_SIZE 1
+
 typedef struct COORD
 {
     int row;
@@ -18,5 +29,5 @@ typedef struct DIM
     SIZE size;
 } DIM;
 
-COORD getNextCoordinate(COORD currentCoord, KEY key, int *direction);
+COORD getNextCoordinate(COORD currentCoord, KEY key, int *x_dir, int *y_dir);
 DIM createDim(int r, int c, int x, int y);

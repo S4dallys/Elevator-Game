@@ -9,3 +9,5 @@ typedef char KEY;
 #define A_KEY_SHF 'A'
 #define S_KEY_SHF 'S'
 #define D_KEY_SHF 'D'
+
+#define INTERACT 'e'

@@ -13,11 +13,10 @@ typedef STRING_10 COLOR;
 #define NORMAL   0
 #define DOOR     1
 #define LKD_DOOR 2
-// #define ITEM     3
-#define ELEVATOR 4
-#define DEATH    5
+#define ELEVATOR 3
+#define DEATH    4
+#define NONE     5
 #define CUSTOM   6
-#define NONE     7
 
 
 
@@ -30,15 +29,6 @@ typedef struct RULE
     int eventid;
     char ch;
 } RULE;
-
-typedef struct APRULE
-{
-    int start;
-    int width;
-    COLOR color;
-    int colType;
-    char ch;
-} APRULE;
 
 typedef RULE RULEARRAY[50];
 
@@ -66,5 +56,9 @@ void strToAnsi(COLOR id);
 void textColor(COLOR color);
 void resetColor();
 
-void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player);
+void printFrame(ROOM *room, RULEARRAY R, int *nR, COORD next_coord, PLAYER *player);
 void displayRules(RULEARRAY R, int nR, int output);
+
+COORD evaluateMove(ROOM *room, COORD playerCoord, COORD nextCoord, RULEARRAY R, int *nR, char key);
+
+char findChar(TXTFILE path, int row, int col);

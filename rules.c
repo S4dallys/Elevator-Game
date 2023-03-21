@@ -178,71 +178,58 @@ void resetColor()
     printf("\e[0m");
 }
 
-APRULE createAprule(int start, int width, COLOR color, int colType, char ch)
-{
-    APRULE aprule = {0};
-
-    aprule.start = start;
-    aprule.width = width;
-    strcpy(aprule.color, color);
-    aprule.colType = colType;
-    aprule.ch = ch;
-
-    return aprule;
-}
-
 /*
 Prints exactly one frame WITH color rules
 @param [room] cur_room instance
 @param [R] rule array associated with room
 @param [nR] no of items in R
 */
-void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player)
+void printFrame(ROOM *room, RULEARRAY R, int *nR, COORD next_coord, PLAYER *player)
 {
-    int line_ind = 0, R_ind = 0, total_rules = 0, buf_ind = 0, rulesbuf_ind = 0;
+    int line_ind = 0, R_ind = 0, total_rules = 0, buf_ind = 0, rulesbuf_ind = 0, rule_applied = 0;
     char buffer[100] = {0};
-    APRULE aprule_arr[15];
-    FILE *fstream = fopen(room.f_path, "r");
+    RULE aprule_arr[15];
+    FILE *fstream = fopen(room->f_path, "r");
 
     while (feof(fstream) == 0)
     {
         fgets(buffer, sizeof(buffer), fstream);
         
+        // gets line i from file
         total_rules = 0;
-        while (R[R_ind].dim.coord.row == line_ind && R_ind < nR)
+        while (R[R_ind].dim.coord.row == line_ind && R_ind < *nR)
         {
+            // adds rule to array if rule is in line i
             if (R[R_ind].isEnabled) 
-                aprule_arr[total_rules++] = createAprule(
-                            R[R_ind].dim.coord.col,
-                            R[R_ind].dim.size.width,
-                            R[R_ind].color,
-                            R[R_ind].colType,
-                            R[R_ind].ch
-                );
+                aprule_arr[total_rules++] = R[R_ind];
 
             R_ind++;
         }
 
+        // iterates through each char in line i
         buf_ind = 0; 
         rulesbuf_ind = 0;
         while (buf_ind<strlen(buffer))
         {
-            if (player.dim.coord.row == line_ind && player.dim.coord.col == buf_ind)
+            // if char is PLAYER
+            if (player->dim.coord.row == line_ind && player->dim.coord.col == buf_ind)
             {
-                if (player.direction)
-                    printf("\\%c", player.sprite);
-                else
-                    printf("%c/", player.sprite);
-                buf_ind = buf_ind + 2;
-                continue;
+                printf("%c", player->sprite);
             }
-            if (rulesbuf_ind < total_rules)
+
+            // if there are still rules related to line i
+            else if (rulesbuf_ind < total_rules)
             {
-                if (aprule_arr[rulesbuf_ind].start == buf_ind)
+                // if rule column is same as char
+                if (aprule_arr[rulesbuf_ind].dim.coord.col == buf_ind)
                 {
+                    // apply rule color
                     textColor(aprule_arr[rulesbuf_ind].color);
-                    for (int i=0; i<aprule_arr[rulesbuf_ind].width; i++)
+                    // iterate through chars until rule is over
+                    for (int i=0; i<aprule_arr[rulesbuf_ind].dim.size.width; i++)
                     {
+                        rule_applied = 1;
+
                         if (aprule_arr[rulesbuf_ind].colType == CUSTOM)
                             printf("%c", (aprule_arr[rulesbuf_ind].ch != '`')
                             ? aprule_arr[rulesbuf_ind].ch : ' ');
@@ -250,12 +237,31 @@ void printFrame(ROOM room, RULEARRAY R, int nR, PLAYER player)
                             printf("%c", buffer[buf_ind]);
                         buf_ind++;
                     }
+                    // resete color
                     resetColor();
                     rulesbuf_ind++;
                 }
-                else printf("%c", buffer[buf_ind++]);
+                // if rule column is not same as char
+                else goto def;
             }
-            else printf("%c", buffer[buf_ind++]);
+            // if no more rules
+            else
+            {
+                def:
+                if (buffer[buf_ind] == '.')
+                {
+                textColor(MAG);
+                printf("%c", buffer[buf_ind]);
+                resetColor();
+                }
+                else printf("%c", buffer[buf_ind]);
+            }
+
+            // go to next char
+            if (rule_applied == 0)
+                buf_ind++;
+            else 
+                rule_applied = 0;
         }
 
         // got to next line
@@ -343,10 +349,147 @@ void sortRules(RULEARRAY R, int nR) {
 //     sortRules(R, *nR);
 // }
 
-// copy paste to add rule
-// addRule(
-//         setRule(
-//             createDim(7, 50, 5, 1), YELB,
-//             1, 1
-//         ), r_array, &n_r_array
-//     );
+void killPlayer(ROOM *room, RULEARRAY R, int *nR)
+{
+    *room = initRoom(room->f_default);
+    initRules(*room, R, nR);
+}
+
+
+RULE getAction(RULEARRAY R, int nR, COORD nextCoord, ROOM room)
+{
+    int i = 0;
+    RULE rule; 
+    rule.isEnabled = -1;
+    while (i<nR)
+    {
+        if (R[i].dim.coord.row == nextCoord.row && 
+            nextCoord.col >= R[i].dim.coord.col && nextCoord.col < R[i].dim.size.width + R[i].dim.coord.col
+            && R[i].isEnabled == 1)
+                return R[i];
+        i++;
+    }
+
+    FILE *fp = fopen(room.f_path, "r");
+    char buffer[100];
+    i = 0;
+    while (fgets(buffer, sizeof(buffer), fp)) 
+    { 
+        if(i == nextCoord.row) 
+        { 
+            rule.ch = buffer[nextCoord.col];
+            break;
+        } 
+        i++; 
+    } 
+    fclose(fp);
+    return rule;
+}
+
+char findChar(TXTFILE path, int row, int col)
+{
+    FILE *fp = fopen(path, "r");
+    char buffer[100];
+    int i = 0;
+    while (fgets(buffer, sizeof(buffer), fp)) 
+    { 
+        if(i == row) 
+        { 
+            break;
+        } 
+        i++; 
+    } 
+    return buffer[col];
+    fclose(fp);
+}
+
+
+COORD evaluateMove(ROOM *room, COORD playerCoord, COORD nextCoord, RULEARRAY R, int *nR, char key)
+{
+    RULE action = getAction(R, *nR, nextCoord, *room);
+    if (action.isEnabled != -1)
+        switch (action.colType)
+        {
+            case NORMAL:
+                return playerCoord;
+                break;
+            case DOOR:
+                // enterNextRoom();
+                break;
+            case LKD_DOOR:
+                break;
+            case ELEVATOR:
+                break;
+            case DEATH:
+                goto death;
+                break;
+            case NONE:
+                return nextCoord;
+                break;
+            case CUSTOM:
+                if (action.ch == '`')
+                    return nextCoord;
+                else
+                    return playerCoord;
+                break;
+        }
+    
+    else
+        switch (action.ch)
+        {
+            case '.':
+                death:
+                killPlayer(room, R, nR);
+                return room->default_pos;
+                break;
+            case '|':
+            case '_':
+                return playerCoord;
+                break;
+        }
+
+    int diff;
+    int i;
+    char ch;
+    COORD pos = nextCoord;
+    switch (key)
+    {
+        case W_KEY_SHF:
+            for (i=1; i<=ROW_SHF_SIZE; i++)
+                if (findChar(room->f_path, playerCoord.row - i, playerCoord.col) != ' ') 
+                {
+                    pos = (COORD) {playerCoord.row - i + 1, playerCoord.col};
+                    break;
+                }
+            break;
+        case A_KEY_SHF:
+            for (i=1; i<=COL_SHF_SIZE; i++)
+                if (findChar(room->f_path, playerCoord.row, playerCoord.col - i) != ' ') 
+                {
+                    pos = (COORD) {playerCoord.row, playerCoord.col - i + 1};
+                    break;
+                }
+            break;
+        case S_KEY_SHF:
+            for (i=1; i<=ROW_SHF_SIZE; i++)
+                if (findChar(room->f_path, playerCoord.row + i, playerCoord.col) != ' ') 
+                {
+                    pos = (COORD) {playerCoord.row + i - 1, playerCoord.col};
+                    break;
+                }
+            break;
+        case D_KEY_SHF:
+            for (i=1; i<=COL_SHF_SIZE; i++)
+                if (findChar(room->f_path, playerCoord.row, playerCoord.col + i) != ' ') 
+                {
+                    pos = (COORD) {playerCoord.row, playerCoord.col + i - 1};
+                    break;
+                }
+            break;
+    }
+
+    // if (last.row == -1)
+    //     return nextCoord;
+    
+    return pos;
+}

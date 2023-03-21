@@ -21,48 +21,52 @@ DIM createDim(int r, int c, int w, int h)
 @return returns COORD struct containing the coord AFTER keypress 
 and returns {-1, -1} if [key] is invalid
 */ 
-COORD getNextCoordinate(COORD currentCoord, KEY key, int * direction)
+COORD getNextCoordinate(COORD currentCoord, KEY key, int * x_dir, int * y_dir)
 {
     COORD nextCoord = currentCoord;
 
     switch (key)
     {
         case W_KEY:
-            nextCoord.row = currentCoord.row - 1;
+            nextCoord.row = currentCoord.row - ROW_SIZE;
             nextCoord.col = currentCoord.col;
+            *y_dir = TOP;
             break;
         case A_KEY:
             nextCoord.row = currentCoord.row;
-            nextCoord.col = currentCoord.col - 2;
-            *direction = 1;
+            nextCoord.col = currentCoord.col - COL_SIZE;
+            *x_dir = LEFT;
             break;
         case S_KEY:
-            nextCoord.row = currentCoord.row + 1;
+            nextCoord.row = currentCoord.row + ROW_SIZE;
             nextCoord.col = currentCoord.col;
+            *y_dir = BOTTOM;
             break;
         case D_KEY:
             nextCoord.row = currentCoord.row;
-            nextCoord.col = currentCoord.col + 2;
-            *direction = 0;
+            nextCoord.col = currentCoord.col + COL_SIZE;
+            *x_dir = RIGHT;
             break;
 
         case W_KEY_SHF:
-            nextCoord.row = currentCoord.row - 4;
+            nextCoord.row = currentCoord.row - ROW_SHF_SIZE;
             nextCoord.col = currentCoord.col;
+            *y_dir = TOP;
             break;
         case A_KEY_SHF:
             nextCoord.row = currentCoord.row;
-            nextCoord.col = currentCoord.col - 8;
-            *direction = 1;
+            nextCoord.col = currentCoord.col - COL_SHF_SIZE;
+            *x_dir = LEFT;
             break;
         case S_KEY_SHF:
-            nextCoord.row = currentCoord.row + 4;
+            nextCoord.row = currentCoord.row + ROW_SHF_SIZE;
             nextCoord.col = currentCoord.col;
+            *y_dir = BOTTOM;
             break;
         case D_KEY_SHF:
             nextCoord.row = currentCoord.row;
-            nextCoord.col = currentCoord.col + 8;
-            *direction = 0;
+            nextCoord.col = currentCoord.col + COL_SHF_SIZE;
+            *x_dir = RIGHT;
             break;
 
         default:
