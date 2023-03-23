@@ -56,9 +56,8 @@ void strToAnsi(COLOR id);
 void textColor(COLOR color);
 void resetColor();
 
-void printFrame(ROOM *room, RULEARRAY R, int *nR, COORD next_coord, PLAYER *player);
 void displayRules(RULEARRAY R, int nR, int output);
 
-COORD evaluateMove(ROOM *room, COORD playerCoord, COORD nextCoord, RULEARRAY R, int *nR, char key);
-
 char findChar(TXTFILE path, int row, int col);
+
+int getRulesByRow (RULEARRAY R, int nR, RULEARRAY dest, int row_num);

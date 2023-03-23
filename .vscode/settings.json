@@ -8,6 +8,7 @@
         "dim.h": "c",
         "player.h": "c",
         "room.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "main.h": "c"
     }
 }

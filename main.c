@@ -6,15 +6,15 @@
 
 int main()
 {
-    ROOM cur_room = initRoom(ROOM1_2);
-    PLAYER Plr = createPlayer((COORD) {2, 2});
-    RULEARRAY r_array;
-    int n_r_array;
+    ROOM CUR_ROOM = initRoom(ROOM1_2);
+    PLAYER PLAYER = createPlayer((COORD) {2, 2});
+    RULEARRAY R_ARRAY;
+    int nRULES;
 
-    initRules(cur_room, r_array, &n_r_array);
+    initRules(CUR_ROOM, R_ARRAY, &nRULES);
 
-    Plr.dim.coord = cur_room.default_pos;
-    COORD next_coord = cur_room.default_pos;
+    PLAYER.dim.coord = CUR_ROOM.default_pos;
+    COORD next_coord = CUR_ROOM.default_pos;
 
     char key = '1';
     int i = 0;
@@ -25,13 +25,14 @@ int main()
         system("cls");
         
         if (key != INTERACT)
-            printFrame(&cur_room, r_array, &n_r_array, next_coord, &Plr);
-
+            sprintFrame(CUR_ROOM, R_ARRAY, nRULES, next_coord);
+        printf("%d, %d", PLAYER.dim.coord.row, PLAYER.dim.coord.col);
         key = getch();
 
-        next_coord = getNextCoordinate(Plr.dim.coord, key, &Plr.x_dir, &Plr.y_dir);
+        next_coord = getNextCoordinate(PLAYER.dim.coord, key, &PLAYER.x_dir, &PLAYER.y_dir);
         
-        Plr.dim.coord = evaluateMove(&cur_room, Plr.dim.coord, next_coord, r_array, &n_r_array, key);
+        PLAYER.dim.coord = next_coord;
+        // PLAYER.dim.coord = evaluateMove(&CUR_ROOM, PLAYER.dim.coord, next_coord, R_ARRAY, &nRULES, key);
     }
     
     
