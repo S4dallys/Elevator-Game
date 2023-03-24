@@ -29,5 +29,8 @@ typedef struct DIM
     SIZE size;
 } DIM;
 
+typedef COORD COORDARRAY[10];
+
 COORD getNextCoordinate(COORD currentCoord, KEY key, int *x_dir, int *y_dir);
 DIM createDim(int r, int c, int x, int y);
+int compareCoords (COORD first, COORDARRAY second, int nSecond);

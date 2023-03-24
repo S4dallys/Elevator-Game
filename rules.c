@@ -255,10 +255,11 @@ void displayRules(RULEARRAY R, int nR, int output)
     }
 }
 
-void killPlayer(ROOM *room, RULEARRAY R, int *nR)
+void killPlayer(ROOM *room, RULEARRAY R, int *nR, PLAYER * player)
 {
     *room = initRoom(room->f_default);
     initRules(*room, R, nR);
+    player->hasKey = 0;
 }
 
 char findChar(TXTFILE path, int row, int col)

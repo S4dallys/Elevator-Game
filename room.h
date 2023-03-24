@@ -19,6 +19,7 @@ typedef struct ROOM
     int f_default;
     DIM dim;
     COORD default_pos;
+    int roomNo;
 } ROOM, ELEVATOR_ROOM, SECRET_ROOM;
 
 ROOM initRoom(int id);

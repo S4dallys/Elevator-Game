@@ -8,7 +8,8 @@ ROOM createRoom(ROOM * R,
                 TXTFILE f_rule,
                 int f_default,
                 DIM dim,
-                COORD default_pos
+                COORD default_pos,
+                int roomNo
                 )
 {
     strcpy(R->f_path, f_path);
@@ -16,6 +17,7 @@ ROOM createRoom(ROOM * R,
     R->f_default = f_default;
     R->dim = dim;
     R->default_pos = default_pos;
+    R->roomNo = roomNo;
 }
 
 /*
@@ -32,7 +34,7 @@ ROOM initRoom(int id)
             createRoom(&room,
                 "./maps/1-1.txt", "./maps/1-1r.txt", ROOM1_1,
                 createDim(10, 40, 50, 50), 
-                (COORD) {2, 2}
+                (COORD) {2, 2}, ROOM1_1
             );
             break;
         
@@ -40,7 +42,7 @@ ROOM initRoom(int id)
             createRoom(&room,
                 "./maps/1-2.txt", "./maps/1-2r.txt", ROOM1_1,
                 createDim(10, 40, 50, 50),
-                (COORD) {2, 2}
+                (COORD) {2, 2}, ROOM1_2
             );
             break;
     }

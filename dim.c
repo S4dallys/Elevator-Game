@@ -1,5 +1,18 @@
 #include "dim.h"
 
+int compareCoords (COORD first, COORDARRAY second, int nSecond)
+{
+    for (int i = 0; i < nSecond; i++)
+    {
+        if (first.row == second[i].row
+                && first.col == second[i].col)
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 /*
 @param [r] row number
 @param [c] col number

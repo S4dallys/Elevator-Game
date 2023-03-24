@@ -14,6 +14,7 @@ typedef struct SPRITE
     char sprite;
     int x_dir;
     int y_dir;
+    int hasKey;
 } PLAYER, ENEMY, FRIEND;
 
 PLAYER createPlayer(COORD def_coord);

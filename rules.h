@@ -61,3 +61,5 @@ void displayRules(RULEARRAY R, int nR, int output);
 char findChar(TXTFILE path, int row, int col);
 
 int getRulesByRow (RULEARRAY R, int nR, RULEARRAY dest, int row_num);
+
+void killPlayer(ROOM *room, RULEARRAY R, int *nR, PLAYER * player);

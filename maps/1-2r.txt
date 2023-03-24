@@ -1,16 +1,19 @@
-0 0 1 0 RS 0 1 1 x
+0 0 1 0 RS 0 0 1 x
 1 0 8 1 WHTB 0 1 1 x
 // hello there! :D
-1 18 4 1 BRED 0 1 1 x
 1 22 4 1 BLUB 0 1 1 x
 1 26 3 1 YELB 0 1 1 x
 1 29 3 1 BRED 0 1 1 x
 1 60 1 1 WHTB 0 1 1 x
-7 22 5 1 WHTB 0 1 1 x
+// key!
+2 22 1 1 BYEL 1 1 1 `
+7 22 5 1 WHTB 6 1 1 x
 7 28 5 1 MAGB 0 1 1 x
 7 36 2 1 BLUB 0 1 1 x
-8 34 5 1 BWHT 0 1 1 x
-9 34 5 1 BWHT 0 1 1 x
-10 34 5 1 BWHT 0 1 1 x
+8 34 5 1 WHTB 0 1 1 x
+9 34 5 1 WHTB 0 1 1 x
+10 34 5 1 WHTB 0 1 1 x
 // bruh
 19 12 12 1 MAGB 0 1 1 x
+// DOOR
+20 29 3 1 CYNB 1 1 1 x
