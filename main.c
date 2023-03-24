@@ -6,7 +6,7 @@
 
 int main()
 {
-    ROOM CUR_ROOM = initRoom(ROOM1_2);
+    ROOM CUR_ROOM = initRoom(ROOM1_1);
     PLAYER PLAYER = createPlayer((COORD) {2, 2});
     RULEARRAY R_ARRAY;
     int nRULES;
@@ -67,8 +67,8 @@ int main()
         // key
         if (compareCoords(PLAYER.dim.coord, (COORDARRAY) {{2, 22}}, 1))
         {
-            setRuleColType(&R_ARRAY[6], 6);
-            setRuleColor(&R_ARRAY[6], reset);
+            setRuleColType(&R_ARRAY[1], 6);
+            setRuleColor(&R_ARRAY[1], reset);
             PLAYER.hasKey = 1;
         }
 
