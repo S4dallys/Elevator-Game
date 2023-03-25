@@ -12,8 +12,7 @@ typedef struct SPRITE
     DIM dim;
     S_TYPE s_type;
     char sprite;
-    int x_dir;
-    int y_dir;
+    int dir;
     int hasKey;
 } PLAYER, ENEMY, FRIEND;
 

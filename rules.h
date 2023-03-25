@@ -31,6 +31,7 @@ typedef struct RULE
 } RULE;
 
 typedef RULE RULEARRAY[50];
+typedef int DIALOGUES[20]; 
 
 // deprecated
 
@@ -63,3 +64,5 @@ char findChar(TXTFILE path, int row, int col);
 int getRulesByRow (RULEARRAY R, int nR, RULEARRAY dest, int row_num);
 
 void killPlayer(ROOM *room, RULEARRAY R, int *nR, PLAYER * player);
+
+void setRuleEventId(RULE *rule, int eventId);

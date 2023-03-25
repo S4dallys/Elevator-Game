@@ -94,10 +94,11 @@ void setRuleColor(RULE *rule, COLOR color)
     strcpy(rule->color, color);
 }
 
-/*
-@param [*rule] pointer to a RULE class
-@return none
-*/
+void setRuleEventId(RULE *rule, int eventId)
+{
+    rule->eventid = eventId;
+}
+
 void disableRule(RULE *rule)
 {
     rule->isEnabled = 0;

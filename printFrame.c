@@ -246,3 +246,99 @@ COORD evaluateMove (COORD prev, COORD next, ROOM *room, RULEARRAY R, int *nR, PL
     return next;
 }
 
+int sprintDialogueBox (TXTFILE dialogue_path, int dialogueNo)
+{
+    int maxCharsPerLine = 50;
+
+    char cur_dlg[60] = "";
+    char cur_dlg2[60] = "";
+    char pressX[10] = "- - - -";
+
+
+    int found = 0;
+    char buffer[120];
+    FILE *filestream;
+    filestream = fopen (dialogue_path, "r");
+    if (dialogueNo != 0)
+    {
+        strcpy(pressX, "PRESS X");
+
+        // copy to cur_dlg and cur_dlg2
+
+        int num;
+
+        while (feof(filestream) == 0)
+        {
+            fscanf(filestream, "%d", &num);
+            if (num == dialogueNo)
+            {
+                fseek(filestream, 1, SEEK_CUR);
+                fgets(buffer, 120, filestream);
+                found = 1;
+                break;
+            }
+            else    
+            {
+                fgets(buffer, 120, filestream);
+            }
+        }
+    }
+
+    fclose(filestream);
+
+    // set dialogues
+    if (found == 1)
+    {
+        memcpy(cur_dlg, buffer, maxCharsPerLine);
+        memcpy(cur_dlg2, buffer + maxCharsPerLine, maxCharsPerLine);
+    }
+
+    // space
+    printf("\n");
+
+    printf("\t- %s -\n\n", pressX);
+    printf("%s\n", cur_dlg);
+    printf("%s", cur_dlg2);
+}
+
+COORD * createCoords(int row, int col, int width, int height)
+{
+    static COORD coord_array[50] = {0};
+
+    int coord_ind = 0;
+    for (int k = 0; k < height; k++)
+    {
+        for (int i = 0; i < width; i++)
+        {
+            coord_array[coord_ind++] = (COORD) {k + row, i + col};
+        }
+    }
+
+    return coord_array;
+}
+
+void createDialogues(int start, int total, DIALOGUES d_array, int *nDialogues)
+{
+    int j = 0;
+    for (int i = 0; i < total; i++)
+    {
+        d_array[j++] = start + i;
+    }
+
+    *nDialogues = j;
+}
+
+COORD frontCoord(PLAYER player)
+{
+    switch (player.dir)
+    {
+        case TOP:
+            return (COORD) {player.dim.coord.row - 1, player.dim.coord.col};
+        case LEFT:
+            return (COORD) {player.dim.coord.row, player.dim.coord.col - 1};
+        case BOTTOM:
+            return (COORD) {player.dim.coord.row + 1, player.dim.coord.col};
+        case RIGHT:
+            return (COORD) {player.dim.coord.row, player.dim.coord.col + 1};
+    }
+}
