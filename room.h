@@ -4,13 +4,12 @@
 #include "player.h"
 #include "E_string.h"
 
+typedef STRING_15 TXTFILE;
 
 // room ids
 #define ROOM1_1 0
 #define ROOM1_2 1
-
-typedef STRING_15 TXTFILE;
-
+#define ROOM1_3 2
 
 typedef struct ROOM
 {

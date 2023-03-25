@@ -93,19 +93,11 @@ int main()
         
         case ROOM1_1:
 
-        // door 1
-        if (compareCoords(PLAYER.dim.coord, createCoords(0, 29, 3, 1), 3))
+        if (compareCoords(PLAYER.dim.coord, createCoords(2, 35, 3, 1), 3))
         {
             CUR_ROOM = initRoom(ROOM1_2);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {19, 30};
-        }
-
-        // event 1
-        if (compareCoords(PLAYER.dim.coord, createCoords(1, 1, 1, 1), 3) && r1_1_1 == 0)
-        {
-                createDialogues(2, 3, DIALOGUES, &nDIALOGUES);
-                r1_1_1 = 1;
+            PLAYER.dim.coord = (COORD) {22, 30};
         }
 
         break;
@@ -114,21 +106,21 @@ int main()
 
         case ROOM1_2:
 
-        // key
-        if (compareCoords(PLAYER.dim.coord, (COORDARRAY) {{2, 22}}, 1))
+        if (compareCoords(PLAYER.dim.coord, createCoords(8, 30, 1, 1), 1))
         {
-            setRuleColType(&R_ARRAY[1], 6);
-            setRuleColor(&R_ARRAY[1], reset);
-            setRuleDlgId(&R_ARRAY[1], 0);
-            PLAYER.hasKey = 1;
+            CUR_ROOM = initRoom(ROOM1_3);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {8, 30};
         }
 
-        // door 1
-        if (compareCoords(PLAYER.dim.coord, createCoords(20, 29, 3, 1), 3))
+        break;
+
+
+        case ROOM1_3:
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(8, 30, 1, 1), 1))
         {
-            CUR_ROOM = initRoom(ROOM1_1);
-            initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {1, 30};
+            createDialogues(7, 2, DIALOGUES, &nDIALOGUES);
         }
 
         break;
