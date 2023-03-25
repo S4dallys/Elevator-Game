@@ -2,7 +2,6 @@
 #include <string.h>
 #include "E_string.h"
 #include "room.h"
-#include "bool.h"
 #include "ansi.h"
 
 
@@ -22,10 +21,11 @@ typedef STRING_10 COLOR;
 
 typedef struct RULE
 {
-    BOOL isEnabled;
+    int isEnabled;
     DIM dim;
     COLOR color;
     int colType;
+    int dlgid;
     int eventid;
     char ch;
 } RULE;
@@ -65,4 +65,4 @@ int getRulesByRow (RULEARRAY R, int nR, RULEARRAY dest, int row_num);
 
 void killPlayer(ROOM *room, RULEARRAY R, int *nR, PLAYER * player);
 
-void setRuleEventId(RULE *rule, int eventId);
+void setRuleDlgId(RULE *rule, int dlgId);

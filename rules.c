@@ -67,36 +67,14 @@ void ansiToStr(COLOR ansi, COLOR buffer)
     fclose(fstream);
 }
 
-/*
-@param [dim] rule dimensions
-@param [color] rule color
-@return RULE class instance
-*/
-// RULE setRule(DIM dim, COLOR color, int ruletype, int eventid)
-// {
-//     RULE rule = {1};
-
-//     rule.dim = dim;
-//     rule.ruleType = ruletype;
-//     rule.eventid = eventid;
-//     setRuleColor(&rule, color);
-
-//     return rule;
-// }
-
-/*
-@param [*rule] pointer to a RULE class
-@param [color] color you want to set that rule to
-@return none
-*/
 void setRuleColor(RULE *rule, COLOR color)
 {
     strcpy(rule->color, color);
 }
 
-void setRuleEventId(RULE *rule, int eventId)
+void setRuleDlgId(RULE *rule, int dlgId)
 {
-    rule->eventid = eventId;
+    rule->dlgid = dlgId;
 }
 
 void disableRule(RULE *rule)
@@ -156,13 +134,14 @@ void initRules(ROOM room, RULEARRAY R, int *nR)
             continue;
         } else fseek(fstream, -1, SEEK_CUR);
         
-        fscanf(fstream, "%d %d %d %d %s %d %d %d %c ", 
+        fscanf(fstream, "%d %d %d %d %s %d %d %d %d %c ", 
             &rule.dim.coord.row,
             &rule.dim.coord.col,
             &rule.dim.size.width,
             &rule.dim.size.height,
             colorid,
             &rule.colType,
+            &rule.dlgid,
             &rule.eventid,
             &rule.isEnabled,
             &rule.ch);
@@ -216,7 +195,7 @@ Can be used to log into another file via > operator
 */
 void displayRules(RULEARRAY R, int nR, int output)
 {
-    printf("\nIND     ROW  COL WIDTH      COLOR     COLTYPE  EVENTID  CHAR  ISENABLED\n\n");
+    printf("\nIND     ROW  COL WIDTH      COLOR     COLTYPE  DLGID  EVENTID  CHAR  ISENABLED\n\n");
     for (int i=0; i<nR; i++)
     {
         printf("%2d.", i);
@@ -239,7 +218,7 @@ void displayRules(RULEARRAY R, int nR, int output)
             resetColor();
 
         printf("       %d", R[i].colType);
-
+        printf("        %d", R[i].dlgid);
         printf("        %d", R[i].eventid);
 
         if (R[i].colType == 6 || output)

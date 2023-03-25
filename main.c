@@ -62,7 +62,7 @@ int main()
         PLAYER.dim.coord = evaluateMove(PLAYER.dim.coord, next_coord, &CUR_ROOM, R_ARRAY, &nRULES, &PLAYER);
 
         // interact
-        int eventNo = 0;
+        int dlgNo = 0;
         int ruleNo;
         if (key == INTERACT)
         {
@@ -72,12 +72,12 @@ int main()
             {} // do nothing
             else
             {
-                eventNo = R_ARRAY[ruleNo].eventid;
+                dlgNo = R_ARRAY[ruleNo].dlgid;
             }
 
-            if (eventNo != 0)
+            if (dlgNo != 0)
             {
-                DIALOGUES[0] = eventNo;
+                DIALOGUES[0] = dlgNo;
                 nDIALOGUES = 1;
             }
         }
@@ -119,7 +119,7 @@ int main()
         {
             setRuleColType(&R_ARRAY[1], 6);
             setRuleColor(&R_ARRAY[1], reset);
-            setRuleEventId(&R_ARRAY[1], 0);
+            setRuleDlgId(&R_ARRAY[1], 0);
             PLAYER.hasKey = 1;
         }
 
