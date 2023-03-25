@@ -1,6 +1,5 @@
 #include "main.h"
 
-#define EVENTS_PATH "EVENTS.txt"
 #define DIALOGUE_PATH "dialogue.txt"
 
 
@@ -15,10 +14,6 @@ int main()
 
     PLAYER.dim.coord = CUR_ROOM.default_pos;
     COORD next_coord = CUR_ROOM.default_pos;
-
-    char key = '1';
-    int i = 0;
-    RULE action;
 
     while(key != 'x')
     {
