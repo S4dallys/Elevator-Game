@@ -10,7 +10,11 @@
 9 3 4 1 BCYN 1 0 0 1 x
 /bluedoor
 9 45 1 1 BLUB 1 0 0 1 `     
+<<<<<<< HEAD
 10 2 4 1 BLU 1 0 0 1 c
+=======
+10 2 6 1 BLU 1 0 0 1 c
+>>>>>>> origin/wet-cat
 10 45 1 1 BLUB 1 0 0 1 `    
 11 45 1 1 BLUB 1 0 0 1 `
 14 5 1 1 BYEL 1 0 0 1 x

@@ -228,6 +228,17 @@ int main()
         {
             CUR_ROOM = initRoom(ROOM2_3);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {9, 4};
+        }
+
+        break;
+        
+        case ROOM2_3:
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(9, 87, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM3_1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = (COORD) {15, 22};
         }
 
