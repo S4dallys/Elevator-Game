@@ -8,18 +8,9 @@ int r1_1b = 0;
 int r1_3a = 0;
 int r1_3b = 0;
 
-
-
-
-
-
-
-
-
-
 int main()
 {
-    ROOM CUR_ROOM = initRoom(ROOM1_1);
+    ROOM CUR_ROOM = initRoom(ROOM2_1);
     PLAYER PLAYER = createPlayer((COORD) {2, 2});
 
     //DEBUG
@@ -115,7 +106,7 @@ int main()
         case ROOM1_1:
 
         // door to room1_2
-        if (compareCoords(PLAYER.dim.coord, createCoords(2, 35, 3, 1), 3))
+        if (compareCoords(PLAYER.dim.coord, createCoords(0, 35, 3, 1), 3))
         {
             CUR_ROOM = initRoom(ROOM1_2);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
@@ -218,6 +209,8 @@ int main()
             setRuleDlgId(&R_ARRAY[4], 0);
         }
 
+        break;
+
         case ROOM2_1:
 
         if (compareCoords(PLAYER.dim.coord, createCoords(9, 45, 1, 2), 2))
@@ -242,6 +235,6 @@ int main()
         
         }
     
-
+    }
     return 0;
 }
