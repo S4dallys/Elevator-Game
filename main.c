@@ -3,7 +3,7 @@
 #define DIALOGUE_PATH "dialogue.txt"
 
 // event flags (be careful to not reuse!)
-int r1_1_1 = 0;
+int r1_3 = 0;
 
 
 
@@ -31,6 +31,8 @@ int main()
     DIALOGUES DIALOGUES = {0};
     int nDIALOGUES = 0;
 
+    int nextEvent = 0;
+
     while(key != 'p')
     { 
         //drawing frame
@@ -57,12 +59,16 @@ int main()
             DIALOGUES[h] = 0;
         nDIALOGUES = 0;
 
+        // reset events
+        nextEvent = 0;
+
         // evaluating move
         next_coord = getNextCoordinate(PLAYER.dim.coord, key, &PLAYER.dir);
         PLAYER.dim.coord = evaluateMove(PLAYER.dim.coord, next_coord, &CUR_ROOM, R_ARRAY, &nRULES, &PLAYER);
 
         // interact
         int dlgNo = 0;
+        int eventNo = 0;
         int ruleNo;
         if (key == INTERACT)
         {
@@ -73,12 +79,17 @@ int main()
             else
             {
                 dlgNo = R_ARRAY[ruleNo].dlgid;
+                eventNo = R_ARRAY[ruleNo].eventid;
             }
 
             if (dlgNo != 0)
             {
-                DIALOGUES[0] = dlgNo;
-                nDIALOGUES = 1;
+                fillDialogues (DIALOGUES, &nDIALOGUES, dlgNo);
+            }
+
+            if (eventNo != 0)
+            {
+                nextEvent = eventNo;
             }
         }
 
@@ -118,9 +129,10 @@ int main()
 
         case ROOM1_3:
 
-        if (compareCoords(PLAYER.dim.coord, createCoords(8, 30, 1, 1), 1))
+        if (compareCoords(PLAYER.dim.coord, createCoords(8, 30, 1, 1), 1) && r1_3 == 0)
         {
             createDialogues(7, 2, DIALOGUES, &nDIALOGUES);
+            r1_3 = 1;
         }
 
         break;

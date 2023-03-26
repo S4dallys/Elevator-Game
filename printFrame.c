@@ -257,6 +257,7 @@ int sprintDialogueBox (TXTFILE dialogue_path, int dialogueNo)
 
     int found = 0;
     char buffer[120];
+    char temp_string[120];
     FILE *filestream;
     filestream = fopen (dialogue_path, "r");
     if (dialogueNo != 0)
@@ -279,7 +280,7 @@ int sprintDialogueBox (TXTFILE dialogue_path, int dialogueNo)
             }
             else    
             {
-                fgets(buffer, 120, filestream);
+                fgets(temp_string, 120, filestream);
             }
         }
     }
@@ -341,4 +342,34 @@ COORD frontCoord(PLAYER player)
         case RIGHT:
             return (COORD) {player.dim.coord.row, player.dim.coord.col + 1};
     }
+}
+
+int fillDialogues (DIALOGUES D, int *nD, int dlgNo)
+{
+    FILE *filestream = fopen("dlgid.txt", "r");
+
+    char buffer[130] = "";
+
+    int num, j = 0, dialogueNo = 1;
+    while (feof(filestream) == 0)
+    {
+        fscanf(filestream, "%d", &num);
+        if (num == dlgNo)
+        {
+            while (dialogueNo != 0)
+            {
+                fscanf(filestream, " %d", &dialogueNo);
+                D[j++] = dialogueNo;
+            }
+            break;
+        }
+        else    
+        {
+            fgets(buffer, 130, filestream);
+        }
+    }
+
+    *nD = j - 1;
+
+    fclose(filestream);
 }
