@@ -51,6 +51,14 @@ ROOM initRoom(int id)
             );
             break;
 
+        case ROOM1_4:
+            createRoom(&room,
+                "./maps/1-4.txt", "./maps/1-4r.txt", ROOM1_1,
+                createDim(0, 0, 50, 20),
+                (COORD) {22, 30}, ROOM1_4
+            );
+            break;
+
         case ROOM2_1:
             createRoom(&room,
                 "./maps/2-1.txt", "./maps/2-1r.txt", ROOM2_1,
@@ -67,13 +75,14 @@ ROOM initRoom(int id)
             );
             break;
 
-        case ROOM1_4:
+        case ROOM2_3:
             createRoom(&room,
-                "./maps/1-4.txt", "./maps/1-4r.txt", ROOM1_1,
+                "./maps/2-3.txt", "./maps/2-3r.txt", ROOM2_1,
                 createDim(0, 0, 50, 20),
-                (COORD) {22, 30}, ROOM1_4
+                (COORD) {10, 3}, ROOM2_3
             );
             break;
+
     }
 
 

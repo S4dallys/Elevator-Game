@@ -14,6 +14,7 @@ typedef STRING_15 TXTFILE;
 #define ROOM2_1 4
 #define ROOM2_2 5
 #define ROOM2_3 6
+#define ROOM3_1 7
 
 typedef struct ROOM
 {
