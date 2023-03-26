@@ -104,7 +104,7 @@ int main()
         
         case ROOM1_1:
 
-        if (compareCoords(PLAYER.dim.coord, createCoords(2, 35, 3, 1), 3))
+        if (compareCoords(PLAYER.dim.coord, createCoords(0, 35, 3, 1), 3))
         {
             CUR_ROOM = initRoom(ROOM1_2);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
@@ -135,22 +135,37 @@ int main()
             r1_3 = 1;
         }
 
+        if (compareCoords(PLAYER.dim.coord, createCoords(0, 29, 3, 1), 3))
+        {
+            CUR_ROOM = initRoom(ROOM2_1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {15, 22};
+        }
+
+
         break;
 
+        case ROOM2_1:
 
+        if (compareCoords(PLAYER.dim.coord, createCoords(9, 45, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM2_2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {10, 3};
+        }
 
+        break;
 
+        case ROOM2_2:
 
+        if (compareCoords(PLAYER.dim.coord, createCoords(9, 87, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM2_3);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {15, 22};
+        }
 
-
-
-
-
-
-
-
-
-
+        break;
 
         }
     }
