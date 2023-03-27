@@ -13,12 +13,12 @@ int r2_3a = 0;
 int main()
 {
     ROOM CUR_ROOM = initRoom(ROOM2_1);
-    PLAYER PLAYER = createPlayer((COORD) {2, 2});
+    PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
     //DEBUG
     //
-    CUR_ROOM = initRoom(ROOM1_4);
-    // CUR_ROOM.default_pos = (COORD) {2, 2};
+    // CUR_ROOM = initRoom(ROOM1_4);
+    // // CUR_ROOM.default_pos = (COORD) {2, 2};
     //
 
     RULEARRAY R_ARRAY;

@@ -255,6 +255,6 @@ char findChar(TXTFILE path, int row, int col)
         } 
         i++; 
     } 
-    return buffer[col];
     fclose(fp);
+    return buffer[col];
 }
