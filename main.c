@@ -8,6 +8,7 @@ int r1_1b = 0;
 int r1_3a = 0;
 int r1_3b = 0;
 int r2_1a = 0;
+int r2_3a = 0;
 
 int main()
 {
@@ -153,7 +154,7 @@ int main()
             CUR_ROOM = initRoom(ROOM1_4);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = (COORD) {21, 2};
-
+            
             createDialogues(143, 5, DIALOGUES, &nDIALOGUES);
         }
 
@@ -232,19 +233,39 @@ int main()
 
         case ROOM2_2:
 
+        // door back to room2_1
+        if (compareCoords(PLAYER.dim.coord, createCoords(9, 0, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM2_1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {10, 41};
+        }
+
         if (compareCoords(PLAYER.dim.coord, createCoords(9, 87, 1, 2), 2))
         {
             CUR_ROOM = initRoom(ROOM2_3);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = (COORD) {17, 3};
 
-            createDialogues(210, 7, DIALOGUES, &nDIALOGUES);
+            if (r2_3a == 0)
+                createDialogues(210, 7, DIALOGUES, &nDIALOGUES);
+            
+            r2_3a = 1;
         }
 
         break;
         
         case ROOM2_3:
+        
+        // elevator to floor 3
+        if (compareCoords(PLAYER.dim.coord, createCoords(17, 0, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM2_2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {9, 84};
+        }
 
+        // elevator to floor 3
         if (compareCoords(PLAYER.dim.coord, createCoords(9, 87, 1, 2), 2))
         {
             CUR_ROOM = initRoom(ROOM3_1);

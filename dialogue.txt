@@ -67,8 +67,10 @@
 // garden 2_3
 210 WOW! WHAT A HUGE GARDEN!
 211 Garden..?
-212 WELL, I GUESS IT'S MORE LIKE A MAZE NOW. 
+212 WELL, I GUESS IT'S MORE LIKE A MAZE OR A JUNGLE NOW. 
 213 PLACE HASN'T BEEN MAINTANED IN A WHILE.
 214 These are plants?
 215 Why are they red...?
 216 DUNNO!
+217 The elevator stopped working..
+218 I should move forward.
