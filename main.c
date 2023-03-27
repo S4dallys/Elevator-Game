@@ -17,8 +17,8 @@ int main()
 
     //DEBUG
     //
-    // CUR_ROOM = initRoom(ROOM1_4);
-    // CUR_ROOM.default_pos = (COORD) {22, 3};
+    CUR_ROOM = initRoom(ROOM1_1);
+    // CUR_ROOM.default_pos = (COORD) {2, 2};
     //
 
     RULEARRAY R_ARRAY;
@@ -183,6 +183,15 @@ int main()
         break;
 
         case ROOM1_4:
+
+        if (eventNo == 102 && PLAYER.hasKey)
+        {
+            CUR_ROOM = initRoom(ELV1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            // createDialogues(219, 3, DIALOGUES, &nDIALOGUES);
+        }
 
         // key!!
         if (compareCoords(PLAYER.dim.coord, createCoords(16, 24, 1, 1), 1))
