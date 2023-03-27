@@ -78,8 +78,8 @@ ROOM initRoom(int id)
         case ROOM2_3:
             createRoom(&room,
                 "./maps/2-3.txt", "./maps/2-3r.txt", ROOM2_1,
-                createDim(0, 0, 50, 20),
-                (COORD) {10, 3}, ROOM2_3
+                createDim(0, 0, 100, 100),
+                (COORD) {17, 3}, ROOM2_3
             );
             break;
 

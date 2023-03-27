@@ -228,7 +228,7 @@ int main()
         {
             CUR_ROOM = initRoom(ROOM2_3);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {9, 4};
+            PLAYER.dim.coord = (COORD) {17, 3};
         }
 
         break;
