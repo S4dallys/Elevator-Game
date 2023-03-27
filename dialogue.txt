@@ -51,3 +51,24 @@
 145 ALSO, PRESS 'E' TO INTERACT WITH ANYTHING COLORED!
 146 THAT IS IF YOU WANT TO PROGRESS...
 147 AND SOLVE THIS GAME'S MYSTERY!
+//
+//
+// FLOOR 2
+200 A broken cellphone.. looks familiar...
+201 Looks like it still has life in it.
+202 Let me try entering a random password..
+203 ..!!
+204 It worked!
+205 Must be my lucky da-
+206 Oh. it shut off.
+207 It's a golden key.
+208 Mark said this was important in climbing this building.
+209 This place smells a little like blood...
+// garden 2_3
+210 WOW! WHAT A HUGE GARDEN!
+211 Garden..?
+212 WELL, I GUESS IT'S MORE LIKE A MAZE NOW. 
+213 PLACE HASN'T BEEN MAINTANED IN A WHILE.
+214 These are plants?
+215 Why are they red...?
+216 DUNNO!

@@ -7,6 +7,7 @@ int r1_1a = 0;
 int r1_1b = 0;
 int r1_3a = 0;
 int r1_3b = 0;
+int r2_1a = 0;
 
 int main()
 {
@@ -220,6 +221,13 @@ int main()
             PLAYER.dim.coord = (COORD) {10, 3};
         }
 
+        // forced dialogue blood
+        if (compareCoords(PLAYER.dim.coord, createCoords(9, 35, 1, 2), 2) && r2_1a == 0)
+        {
+            createDialogues(209, 1, DIALOGUES, &nDIALOGUES);
+            r2_1a = 1;
+        }
+
         break;
 
         case ROOM2_2:
@@ -229,6 +237,8 @@ int main()
             CUR_ROOM = initRoom(ROOM2_3);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = (COORD) {17, 3};
+
+            createDialogues(210, 7, DIALOGUES, &nDIALOGUES);
         }
 
         break;

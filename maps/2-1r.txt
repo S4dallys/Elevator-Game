@@ -8,9 +8,11 @@
 4 28 5 1 RED 1 0 0 1 x
 8 3 4 1 BCYN 1 0 0 1 x
 9 3 4 1 BCYN 1 0 0 1 x
+9 35 1 1 RS 1 0 0 1 x
 /bluedoor
 9 45 1 1 BLUB 1 0 0 1 `     
 10 2 6 1 BLU 1 0 0 1 c
+10 35 1 1 RS 1 0 0 1 x
 10 45 1 1 BLUB 1 0 0 1 `    
 11 45 1 1 BLUB 1 0 0 1 `
 14 5 1 1 BYEL 1 0 0 1 x
