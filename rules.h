@@ -30,7 +30,7 @@ typedef struct RULE
     char ch;
 } RULE;
 
-typedef RULE RULEARRAY[50];
+typedef RULE RULEARRAY[150];
 typedef int DIALOGUES[20]; 
 
 // deprecated
