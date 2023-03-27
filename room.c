@@ -63,7 +63,7 @@ ROOM initRoom(int id)
             createRoom(&room,
                 "./maps/elv1.txt", "./maps/elv1r.txt", ROOM1_1,
                 createDim(0, 0, 50, 20),
-                (COORD) {5, 21}, ELV1
+                (COORD) {6, 21}, ELV1
             );
             break;
 

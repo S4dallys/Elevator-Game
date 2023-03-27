@@ -55,6 +55,11 @@
 149 The elevaor is locked..
 150 I need to find a key.
 151 OOH! I'LL SEE YOU IN FLOOR 2!
+152 GOOD JOB COMPLETING THE TUTORIAL!
+153 W-Wait a sec..
+154 HMM?
+155 Who are you and.. where am I?
+156 ...DON'T YOU ALREADY KNOW?
 //
 //
 // FLOOR 2

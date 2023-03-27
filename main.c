@@ -17,7 +17,7 @@ int main()
 
     //DEBUG
     //
-    CUR_ROOM = initRoom(ROOM1_1);
+    CUR_ROOM = initRoom(ROOM1_4);
     // CUR_ROOM.default_pos = (COORD) {2, 2};
     //
 
@@ -190,7 +190,7 @@ int main()
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = CUR_ROOM.default_pos;
 
-            // createDialogues(219, 3, DIALOGUES, &nDIALOGUES);
+            createDialogues(152, 5, DIALOGUES, &nDIALOGUES);
         }
 
         // key!!
@@ -218,6 +218,19 @@ int main()
             setRuleColor(&R_ARRAY[4], reset);
             setRuleDlgId(&R_ARRAY[2], 0);
             setRuleDlgId(&R_ARRAY[4], 0);
+        }
+
+        break;
+
+        case ELV1:
+
+        if (eventNo == 90)
+        {
+            CUR_ROOM = initRoom(ROOM2_1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            createDialogues(219, 3, DIALOGUES, &nDIALOGUES);
         }
 
         break;

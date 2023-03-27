@@ -4,7 +4,7 @@
 #include "player.h"
 #include "E_string.h"
 
-typedef STRING_15 TXTFILE;
+typedef STRING_20 TXTFILE;
 
 // room ids
 #define ROOM1_1 0
