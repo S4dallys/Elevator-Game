@@ -27,10 +27,11 @@ typedef STRING_20 TXTFILE;
 #define ROOM4_4 17
 #define ELV4    18
 #define ROOM5_1 19
-#define NEW4    20
-#define NEW3    21
-#define NEW2    22
-#define NEW1    23
+#define ELV5    20
+#define NEW4    21
+#define NEW3    22
+#define NEW2    23
+#define NEW1    24
 
 typedef struct ROOM
 {

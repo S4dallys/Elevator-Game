@@ -187,6 +187,14 @@ ROOM initRoom(int id)
             );
             break;
 
+        case ELV5:
+            createRoom(&room,
+                "./maps/elv5.txt", "./maps/elvr.txt", ROOM5_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, ELV5
+            );
+            break;
+
         case NEW4:
             createRoom(&room,
                 "./maps/new4.txt", "./maps/new4r.txt", ROOM5_1,
@@ -218,6 +226,7 @@ ROOM initRoom(int id)
                 (COORD) {6, 21}, NEW1
             );
             break;
+            
     }
 
 
