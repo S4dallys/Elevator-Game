@@ -19,6 +19,8 @@ typedef STRING_20 TXTFILE;
 #define ROOM3_2 9
 #define ROOM3_3 10
 #define ROOM3_4 11
+#define ELV3    12
+#define ROOM4_1 13
 
 typedef struct ROOM
 {

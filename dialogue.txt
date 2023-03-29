@@ -34,7 +34,7 @@
 129 ...
 130 DON'T WORRY, YOU DON'T NEED TO EAT WHERE WE ARE RIGHT NOW.
 131 ANYWAY, THAT KEY IS FOR THE ELEVATOR OVER THERE.
-132 IT BRINGS YOU UP TO THE NEXT FLOOR. CLEAR 6 FLOORS AND YOU'RE FREE!
+132 IT BRINGS YOU UP TO THE NEXT FLOOR. CLEAR 5 FLOORS AND YOU'RE FREE!
 133 FROM WHAT YOU ASK?
 134 YOU'LL SEE!
 135 DON'T FORGET TO PICK THIS UP. BYT HE WAY, IF YOU DIE YOU'LL HAVE TO GET THIS KEY AGAIN!
@@ -123,3 +123,26 @@
 333 I think something happened!
 334 I need to watch out for these live wires..
 335 Looks like some of them are aren't always on..
+336 Looks like I found his wallet.
+337 W-what...
+338 These pictures...
+339 This can't be right...
+340 W-What just happened?
+341 I'm back here huh...
+342 ...
+343 That man is gone too..
+344 It's a bush.
+345 That's it.
+346 I'm a little bit scared to touch it since that red maze area...
+347 "I love you honey."
+348 Love you too.
+349 "I'll be taking the kids to the show later right?"
+350 Mhmm
+351 "Okay, you have fun at the meeting."
+352 Alright hone-
+353 ----------hnrgh
+354 W-What the hell? 
+355 A memory? Was that my wife? 
+356 Why can't I remember..?
+357 The circuit breaker looks destroyed..
+358 I guess I'll have to be careful.
