@@ -146,6 +146,11 @@
 356 Why can't I remember..?
 357 The circuit breaker looks destroyed..
 358 I guess I'll have to be careful.
+359 WELCOME TO FLOOR 3!!
+360 I HEARD THIS ONE IS SHOCKING!
+361 Mark, I need answer-
+362 THEN GO TO THE TOP FLOOR.
+363 ...
 // toy mech 2_3
 222 Hehe, what a cute little robot, wonder what it's doing here
 223 PROBABLY ABANDONED BY ITS OWNER DON'T YOU THINK?

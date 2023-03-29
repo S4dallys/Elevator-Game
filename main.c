@@ -292,17 +292,19 @@ int main()
             PLAYER.dim.coord = (COORD) {9, 84};
         }
 
-        // elevator to floor 3
-        if (compareCoords(PLAYER.dim.coord, createCoords(9, 87, 1, 2), 2))
+        break;
+
+        case ELV2:
+
+        if (eventNo == 200)
         {
             CUR_ROOM = initRoom(ROOM3_1);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {15, 22};
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            createDialogues(359, 5, DIALOGUES, &nDIALOGUES);
         }
-
-        break;
         
-
         case ROOM3_1:
         
         // key!!!
