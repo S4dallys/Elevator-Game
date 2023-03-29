@@ -12,6 +12,7 @@ int r2_3a = 0;
 int r3_2f = 1;
 int r3_2a = 0;
 int r3_3a = 0; 
+int coin1 = 0, coin2 = 0, coin3 = 0, coin4 = 0, coin5 = 0;
 
 int main()
 {
