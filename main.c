@@ -512,6 +512,8 @@ int main()
             CUR_ROOM = initRoom(ROOM4_1);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            createDialogues(445, 4, DIALOGUES, &nDIALOGUES);
         }
 
         break;
