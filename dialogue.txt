@@ -375,3 +375,12 @@
 495 I doubt you will find anything tasting better than these.
 496 ...I'D PASS.
 497 Alright...(that's strange of Mark)
+// 4
+700 I'm not jumping after all...
+701 GOOD FOR YOU!
+702 GOOD FOR ME.. I GUESS?
+// 3
+703 HEY.. LIVE FOR THEM.
+704 I will.
+// 2
+705 ...
