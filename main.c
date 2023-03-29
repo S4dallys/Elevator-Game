@@ -17,6 +17,11 @@ int r4_3b = 0;
 int r4_4a = 0;
 int r4_4b = 0;
 int coin1 = 0, coin2 = 0, coin3 = 0, coin4 = 0, coin5 = 0;
+int r4_1a = 0;
+int r4_1b = 0;
+int r4_2a = 0;
+int r4_2b = 0;
+int r51 = 0, r52 = 0, r53 = 0, r54 = 0, r55 = 0, r56 = 0, r57 = 0, r58 = 0, r59 = 0;
 
 int main()
 {
@@ -307,6 +312,8 @@ int main()
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = CUR_ROOM.default_pos;
 
+            PLAYER.hasKey = 0;
+
             createDialogues(359, 5, DIALOGUES, &nDIALOGUES);
         }
         // key of 2_3
@@ -537,6 +544,8 @@ int main()
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = CUR_ROOM.default_pos;
 
+            PLAYER.hasKey = 0;
+
             createDialogues(445, 4, DIALOGUES, &nDIALOGUES);
         }
 
@@ -549,7 +558,7 @@ int main()
         {
             CUR_ROOM = initRoom(ROOM4_2);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {5, 55};
+            PLAYER.dim.coord = (COORD) {10, 26};
         }
 
         // go to room 4_4
@@ -561,6 +570,72 @@ int main()
         }
 
         if (compareCoords(PLAYER.dim.coord, createCoords(6, 13, 1, 1), 1))
+        case ROOM4_1:
+
+        // key 1 (correct)
+        if (compareCoords(PLAYER.dim.coord, createCoords(4, 32, 1, 1), 1))
+        {
+            setRuleColor(&R_ARRAY[3], reset);
+            setRuleColType(&R_ARRAY[3], 6);
+            setRuleDlgId(&R_ARRAY[3], 0);
+
+            PLAYER.hasKey = 1;
+
+            if (!r4_1a)
+            {
+                createDialogues(500, 10, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_1a = 1;
+        }
+
+        // key 2
+        if (compareCoords(PLAYER.dim.coord, createCoords(7, 22, 1, 1), 1))
+        {
+            setRuleColor(&R_ARRAY[13], reset);
+            setRuleColType(&R_ARRAY[13], 6);
+            setRuleDlgId(&R_ARRAY[13], 0);
+
+            PLAYER.hasKey = 0;
+
+            if (!r4_1b)
+            {
+                createDialogues(510, 13, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_1b = 1;
+        }
+
+        // door
+        if (compareCoords(PLAYER.dim.coord, createCoords(5, 38, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM4_2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {7, 25};
+        }
+
+        break;
+
+        case ROOM4_2:
+
+        // key 1 
+        if (compareCoords(PLAYER.dim.coord, (COORDARRAY) {{6, 23}, {7, 22}}, 2))
+        {
+            CUR_ROOM = initRoom(ROOM4_1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {5, 36};
+        }
+
+        // door
+        if (compareCoords(PLAYER.dim.coord, createCoords(11, 26, 2, 1), 2))
+        {
+            CUR_ROOM = initRoom(ROOM4_3);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {7, 25};
+        }
+
+        // key 1 
+        if (compareCoords(PLAYER.dim.coord, createCoords(5, 27, 1, 1), 1))
         {
             setRuleColor(&R_ARRAY[7], reset);
             setRuleColType(&R_ARRAY[7], 6);
@@ -568,6 +643,7 @@ int main()
 
             PLAYER.hasKey = 0;
 
+<<<<<<< HEAD
             if (r4_3a == 0)
             {
                 createDialogues(450, 15, DIALOGUES, &nDIALOGUES);
@@ -634,6 +710,60 @@ int main()
             r4_4b = 1;
         }
 
+=======
+            if (!r4_2a)
+            {
+                createDialogues(523, 13, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_2a = 1;
+        }
+
+        // key 2
+        if (compareCoords(PLAYER.dim.coord, createCoords(10, 31, 1, 1), 1))
+        {
+            setRuleColor(&R_ARRAY[21], reset);
+            setRuleColType(&R_ARRAY[21], 6);
+            setRuleDlgId(&R_ARRAY[21], 0);
+
+            PLAYER.hasKey = 0;
+
+            if (!r4_2b)
+            {
+                createDialogues(536, 12, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_2b = 1;
+        }
+
+        break;
+
+        case ROOM5_1:
+
+        // BAD ENDING
+        if (compareCoords(PLAYER.dim.coord, createCoords(4, 19, 1, 1), 1))
+        {
+            setRuleColType(&R_ARRAY[1], 6);
+            setRuleColor(&R_ARRAY[1], reset);
+            setRuleDlgId(&R_ARRAY[1], 503);
+
+            setRuleColType(&R_ARRAY[3], 6);
+            setRuleColor(&R_ARRAY[3], reset);
+            setRuleDlgId(&R_ARRAY[3], 0);
+
+            PLAYER.hasKey = 1;
+        }
+
+        // JUMP?
+        if (compareCoords(PLAYER.dim.coord, createCoords(2, 38, 3, 1), 3))
+        {
+            textColor(RED);
+            // end game
+        }
+
+        break;
+
+>>>>>>> origin/sandallys
         }
     }
     return 0;
