@@ -21,7 +21,7 @@ int main()
 
     //DEBUG
     //
-    CUR_ROOM = initRoom(ROOM3_1);
+    CUR_ROOM = initRoom(ROOM2_1);
     // PLAYER.dim.coord = CUR_ROOM.default_pos;
     //
 
@@ -305,6 +305,25 @@ int main()
 
             createDialogues(359, 5, DIALOGUES, &nDIALOGUES);
         }
+        // key of 2_3
+        if (compareCoords(PLAYER.dim.coord, createCoords(8, 80, 1, 1), 1))
+        {
+            setRuleColType(&R_ARRAY[21], 6);
+            setRuleColor(&R_ARRAY[21], reset);
+            setRuleDlgId(&R_ARRAY[21], 0);
+            PLAYER.hasKey = 1;
+        }
+
+        if (eventNo == 200 && PLAYER.hasKey == 1)
+        {
+            CUR_ROOM = initRoom(ELV2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            createDialogues(262, 6, DIALOGUES, &nDIALOGUES);
+        }
+
+        break;
         
         case ROOM3_1:
         
