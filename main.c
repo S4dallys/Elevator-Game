@@ -21,7 +21,7 @@ int r51 = 0, r52 = 0, r53 = 0, r54 = 0, r55 = 0, r56 = 0, r57 = 0, r58 = 0, r59 
 
 int main()
 {
-    ROOM CUR_ROOM = initRoom(ROOM2_1);
+    ROOM CUR_ROOM = initRoom(ROOM1_1);
     PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
     //DEBUG
