@@ -12,6 +12,7 @@ int r2_3a = 0;
 int r3_2f = 1;
 int r3_2a = 0;
 int r3_3a = 0; 
+int coin1 = 0, coin2 = 0, coin3 = 0, coin4 = 0, coin5 = 0;
 
 int main()
 {
@@ -292,14 +293,18 @@ int main()
             PLAYER.dim.coord = (COORD) {9, 84};
         }
 
-        // elevator to floor 3
-        if (compareCoords(PLAYER.dim.coord, createCoords(9, 87, 1, 2), 2))
+        break;
+
+        case ELV2:
+
+        if (eventNo == 200)
         {
             CUR_ROOM = initRoom(ROOM3_1);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {15, 22};
-        }
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
 
+            createDialogues(359, 5, DIALOGUES, &nDIALOGUES);
+        }
         // key of 2_3
         if (compareCoords(PLAYER.dim.coord, createCoords(8, 80, 1, 1), 1))
         {
@@ -320,7 +325,6 @@ int main()
 
         break;
         
-
         case ROOM3_1:
         
         // key!!!
@@ -528,6 +532,8 @@ int main()
             CUR_ROOM = initRoom(ROOM4_1);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            createDialogues(445, 4, DIALOGUES, &nDIALOGUES);
         }
 
         break;
