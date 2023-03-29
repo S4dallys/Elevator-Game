@@ -857,7 +857,7 @@ int main()
             r58 = 1;
         }
 
-        // 9
+        // 
         if (compareCoords(PLAYER.dim.coord, createCoords(6, 13, 55, 1), 55) && r59 == 0)
         {
             createDialogues(630, 1, DIALOGUES, &nDIALOGUES);
@@ -868,6 +868,67 @@ int main()
         }
 
         break;
+
+        case NEW4:
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(6, 16, 1, 1), 1))
+        {
+            CUR_ROOM = initRoom(NEW3);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {8, 67};
+        }
+
+        break;
+
+        case NEW3:
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(15, 7, 4, 1), 4))
+        {
+            CUR_ROOM = initRoom(NEW2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {17, 94};
+        }
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(8, 68, 1, 1), 1))
+        {
+            CUR_ROOM = initRoom(NEW4);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {6, 17};
+        }
+
+        break; 
+
+        case NEW2:
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(16, 2, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(NEW1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {1, 36};
+        }
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(16, 95, 1, 3), 3))
+        {
+            CUR_ROOM = initRoom(NEW3);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {14, 9};
+        }
+
+        break;
+
+        case NEW1:
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(0, 35, 3, 1), 3))
+        {
+            CUR_ROOM = initRoom(NEW2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {17, 4};
+        }
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(11, 35, 3, 1), 3))
+        {
+
+        }
 
         }
 
