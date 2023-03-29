@@ -12,16 +12,20 @@ int r2_3a = 0;
 int r3_2f = 1;
 int r3_2a = 0;
 int r3_3a = 0; 
+int r4_3a = 0;
+int r4_3b = 0;
+int r4_4a = 0;
+int r4_4b = 0;
 int coin1 = 0, coin2 = 0, coin3 = 0, coin4 = 0, coin5 = 0;
 
 int main()
 {
-    ROOM CUR_ROOM = initRoom(ROOM1_1);
+    ROOM CUR_ROOM = initRoom(ROOM4_4);
     PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
     //DEBUG
     //
-    CUR_ROOM = initRoom(ROOM1_1);
+    CUR_ROOM = initRoom(ROOM4_4);
     // PLAYER.dim.coord = CUR_ROOM.default_pos;
     //
 
@@ -537,6 +541,98 @@ int main()
         }
 
         break;
+
+        case ROOM4_3:
+
+        // go to room 4_2
+        if (compareCoords(PLAYER.dim.coord, createCoords(4, 19, 3, 1), 3))
+        {
+            CUR_ROOM = initRoom(ROOM4_2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {5, 55};
+        }
+
+        // go to room 4_4
+        if (compareCoords(PLAYER.dim.coord, createCoords(9, 33, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM4_4);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {12, 10};
+        }
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(6, 13, 1, 1), 1))
+        {
+            setRuleColor(&R_ARRAY[7], reset);
+            setRuleColType(&R_ARRAY[7], 6);
+            setRuleDlgId(&R_ARRAY[7], 0);
+
+            PLAYER.hasKey = 0;
+
+            if (r4_3a == 0)
+            {
+                createDialogues(450, 15, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_3a = 1;
+        }
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(13, 21, 1, 1), 1))
+        {
+            setRuleColor(&R_ARRAY[18], reset);
+            setRuleColType(&R_ARRAY[18], 6);
+            setRuleDlgId(&R_ARRAY[18], 0);
+
+            PLAYER.hasKey = 0;
+
+            if (r4_3b == 0)
+            {
+                createDialogues(465, 12, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_3b = 1;
+        }
+
+        case ROOM4_4:
+
+        // go to room 4_3
+        if (compareCoords(PLAYER.dim.coord, createCoords(11, 7, 1, 3), 3))
+        {
+            CUR_ROOM = initRoom(ROOM4_3);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {9, 30};
+        }
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(7, 32, 1, 1), 1))
+        {
+            setRuleColor(&R_ARRAY[3], reset);
+            setRuleColType(&R_ARRAY[3], 6);
+            setRuleDlgId(&R_ARRAY[3], 0);
+
+            PLAYER.hasKey = 0;
+
+            if (r4_4a == 0)
+            {
+                createDialogues(477, 12, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_4a = 1;
+        }
+
+        if (compareCoords(PLAYER.dim.coord, createCoords(19, 27, 1, 1), 1))
+        {
+            setRuleColor(&R_ARRAY[14], reset);
+            setRuleColType(&R_ARRAY[14], 6);
+            setRuleDlgId(&R_ARRAY[14], 0);
+
+            PLAYER.hasKey = 0;
+
+            if (r4_4b == 0)
+            {
+                createDialogues(489, 9, DIALOGUES, &nDIALOGUES);
+            }
+
+            r4_4b = 1;
+        }
 
         }
     }
