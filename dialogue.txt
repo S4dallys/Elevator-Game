@@ -344,3 +344,90 @@
 602 "This is the key to what you desire."
 603 "Choose wisely."
 604 The end?
+// 1
+605 DON'T YOU GET IT NOW?
+606 YOU KNOW WHO I AM DON'T YOU?
+607 ....Yes
+// 2
+608 You are my subconscious.
+609 You were never real.
+610 ...I thought I was going insane for a while there.
+611 ...AND MARK?
+612 My son, of course. 
+// 3
+613 I don't like you bearing his name, by the way.
+614 WELL I AM YOU, SO..
+615 Right..
+616 At the very least,
+617 I remember what I came here to do.
+// 4
+618 I TOLD YOU YOU WOULD UNDERSTAND WHEN YOU REACHED THE TOP.
+619 Yeah... 
+620 I came here to join them right?
+621 I wasn't there for them when they were alive, but I'm here now.
+// 5
+622 I CAN'T MAKE THE CHOICE FOR YOU.
+623 MARK AND RACHEL CAN'T SEE YOU RIGHT NOW.
+624 A little pessimistic are we..?
+// 6
+625 IS THIS THE END THEN?
+626 ...
+// 7
+627 PLEASE FIND THE KEY. 
+628 AND MAKE THE RIGHT CHOICE.
+// 8
+629 FOR THEM.
+// 9
+630 Rachel, Mark.... I-
+// Key1 4_3
+450 Yes, of course.
+451 How could I forget the reason I came to this place
+452 There was an attack and...
+453 Yes, zombies, they wreaked havoc everywhere.
+454 I had to find a safehouse, away from danger.
+455 But for some reason...I can't seem to remember anything aside from that
+456 Hey Mark, what do you know about it? The outbreak?
+457 OUTBREAK?
+458 Yeah, the catastrophic zombie outbreak that caused worldwide panic,
+459 you know, the reason why we are here right now.
+460 ...
+461 FIRST TIME HEARING ABOUT THIS
+462 What do you mean? How can you not know about it? It's literally everywhere.
+463 (But now that I think about it, it is quite strange
+464 how I've never seen even a single zombie yet)
+// Key2 4_3
+465 How did I even end up here?
+466 Everything is so blurry right before I met Mark.
+467 I just found myself running, running...
+468 The problem is, what was I running away from?
+469 For starters, what even is this place?
+470 Hey Mark, where are we?
+471 YOU DON'T KNOW? WE'RE IN THE DISTRICT HOSPITAL.
+472 District hospital? That can't be possible.
+473 Didn't we see a life-sized maze a while ago? How can that be inside a hospital?
+474 WHAT MAZE? MAYBE YOU'RE SEEING THINGS.
+475 ...
+476 ...maybe.
+// Key1 4_4
+477 That TV...takes me back to the good old days.
+478 We used to huddle together on the couch and watch movies together.
+479 Wait..."we"? Who was I with? My family?
+480 Mark, do you know me? Do I have a family of my own?
+481 ...
+482 Mark? Are you there?
+483 ...
+484 Mark, are you not telling me something? Please, I need to know.
+485 ...
+486 Mark, I'm beg-
+487 SHUT UP, YOU DON'T NEED TO KNOW!
+488 I-... ok.
+// Key2 4_4
+489 Beef stew once again, but this smells different from the other one.
+490 There's no mistaking it, this is Rachel's recipe.
+491 Yes, Rachel, the love of my life.
+492 She cooks the best tasting beef stew, despite being vegetarian herself.
+493 But why...? Maybe it's for someone else.
+494 Anyways, Mark you've got to try these once you get the chance.
+495 I doubt you will find anything tasting better than these.
+496 ...I'D PASS.
+497 Alright...(that's strange of Mark)
