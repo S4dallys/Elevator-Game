@@ -30,11 +30,7 @@ int main()
 
     //DEBUG
     //
-<<<<<<< HEAD
     CUR_ROOM = initRoom(ROOM5_1);
-=======
-    CUR_ROOM = initRoom(ROOM4_4);
->>>>>>> origin/wet-cat
     // PLAYER.dim.coord = CUR_ROOM.default_pos;
     //
 
@@ -676,6 +672,14 @@ int main()
         {
             textColor(RED);
             // end game
+        }
+
+        // leave rooftop
+        if (eventNo == 501 && PLAYER.hasKey)
+        {
+            CUR_ROOM = initRoom(NEW4);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
         }
 
         break;
