@@ -671,9 +671,9 @@ int main()
 
         if (compareCoords(PLAYER.dim.coord, createCoords(6, 13, 1, 1), 1))
         {
-            setRuleColor(&R_ARRAY[7], reset);
-            setRuleColType(&R_ARRAY[7], 6);
-            setRuleDlgId(&R_ARRAY[7], 0);
+            setRuleColor(&R_ARRAY[11], reset);
+            setRuleColType(&R_ARRAY[11], 6);
+            setRuleDlgId(&R_ARRAY[11], 0);
 
             PLAYER.hasKey = 0;
 
@@ -687,9 +687,9 @@ int main()
 
         if (compareCoords(PLAYER.dim.coord, createCoords(13, 21, 1, 1), 1))
         {
-            setRuleColor(&R_ARRAY[18], reset);
-            setRuleColType(&R_ARRAY[18], 6);
-            setRuleDlgId(&R_ARRAY[18], 0);
+            setRuleColor(&R_ARRAY[26], reset);
+            setRuleColType(&R_ARRAY[26], 6);
+            setRuleDlgId(&R_ARRAY[26], 0);
 
             PLAYER.hasKey = 0;
 
