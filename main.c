@@ -25,14 +25,13 @@ int r51 = 0, r52 = 0, r53 = 0, r54 = 0, r55 = 0, r56 = 0, r57 = 0, r58 = 0, r59 
 
 int main()
 {
-    ROOM CUR_ROOM = initRoom(ROOM4_4);
-    PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
-    //DEBUG
-    //
-    CUR_ROOM = initRoom(ROOM5_1);
-    // PLAYER.dim.coord = CUR_ROOM.default_pos;
-    //
+    printMainMenu();
+
+    int tempchar = getch();
+
+    ROOM CUR_ROOM = initRoom(ROOM5_1);
+    PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
     RULEARRAY R_ARRAY;
     int nRULES;
@@ -672,7 +671,10 @@ int main()
         if (compareCoords(PLAYER.dim.coord, createCoords(2, 38, 3, 1), 3))
         {
             textColor(RED);
-            // end game
+            
+            printf("\n\nYOU JUMPED.\nPRESS ANY KEY TO QUIT GAME\n");
+            int tempchare = getch();
+            key = 'p';
         }
 
         // leave rooftop
@@ -871,6 +873,9 @@ int main()
         break;
 
         }
+
     }
+        system("cls");
+        printf("Thank you for playing!\n\n\n");
     return 0;
 }

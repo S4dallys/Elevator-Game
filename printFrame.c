@@ -8,6 +8,15 @@
 #define MCOL 2
 #define PCOL 3
 
+void printMainMenu()
+{
+    system("cls");
+    printf("Thank you for Installing!\n");
+    printf("Have fun playing \"\"!");
+    printf("\n\n\nPress any key to start!\n(press p to leave game anytime)");
+    printf("\n\n\n\nTeam BillySchmidht 2023\n");
+}
+
 int getNextRuleRow (RULEARRAY R, int nR, int start)
 {
     int i = 0;
