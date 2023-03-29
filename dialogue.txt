@@ -122,7 +122,7 @@
 248 I hope
 // window_lamp 2_1
 249 That lamp looks really dangerous, I feel like it might explode any minute now
-250 BETTER STEP A BIT FURTHER AWAY FROM IT THE
+250 BETTER STEP A BIT FURTHER AWAY FROM IT
 251 I guess so
 // window_monument 2_1
 252 WHAT'S THAT MOUND OF RUBBLE?
