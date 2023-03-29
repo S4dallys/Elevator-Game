@@ -86,3 +86,40 @@
 219 WELCOME TO FLOOR 2!
 220 I HOPE YOU'LL GET THE ANSWERS TO YOUR QUESTIONS...
 221 CATCH YA LATER!
+// FLOOR 3
+301 OH HEY! YOU BEAT THE MAZE!
+302 CONGRATULATIONS! YOU'RE OFFICIALLY AT THE HALFWAY MARK.
+303 Hey... what exactly is going on?
+304 NOT EXACTLY SURE MYSELF...
+305 THOUGH IT'S DEFINITELY SOMETHING REALLY BAD :c
+306 ...
+307 I should keep going.
+308 It's a sofa.
+309 It look nice and comfy. 
+310 Hm? I think...
+311 I used to sit on one of these a lot with... 
+312 ...my family.
+313 Do I still have a family?
+314 Is this a water dispenser?
+315 Maybe I should take a drink.
+// forced dlg 1
+316 NO WAY.
+317 IS THAT ANOTHER PERSON?
+318 ...
+319 "h-hello"
+320 "are you a survivor, too?"
+321 "oh my god, I thought I was the only one left!"
+322 "hheeeheehee..."
+323 ...?
+324 Can you tell me what happened here? 
+325 I just woke up a couple hours ago and nothing makes sense.
+326 "ahh yes yes"
+327 "after you do something for me first!"
+328 "ii need you to find my green wallet somewhere in those rooms..."
+329 "i just want to see my kids' pictures again.."
+330 And then you'll tell me?
+331 "of course i will!"
+332 ...alright
+333 I think something happened!
+334 I need to watch out for these live wires..
+335 Looks like some of them are aren't always on..

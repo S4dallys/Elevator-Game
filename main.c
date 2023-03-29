@@ -9,6 +9,7 @@ int r1_3a = 0;
 int r1_3b = 0;
 int r2_1a = 0;
 int r2_3a = 0;
+int r3_2f = 1;
 
 int main()
 {
@@ -17,8 +18,8 @@ int main()
 
     //DEBUG
     //
-    // CUR_ROOM = initRoom(ROOM1_4);
-    // // CUR_ROOM.default_pos = (COORD) {2, 2};
+    CUR_ROOM = initRoom(ROOM3_1);
+    // PLAYER.dim.coord = CUR_ROOM.default_pos;
     //
 
     RULEARRAY R_ARRAY;
@@ -230,6 +231,8 @@ int main()
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = CUR_ROOM.default_pos;
 
+            PLAYER.hasKey = 0;
+
             createDialogues(219, 3, DIALOGUES, &nDIALOGUES);
         }
 
@@ -297,8 +300,88 @@ int main()
 
         break;
         
+
+        case ROOM3_1:
+        
+        // key!!!
+        if (compareCoords(PLAYER.dim.coord, createCoords(4, 27, 1, 1), 1))
+        {
+            setRuleColType(&R_ARRAY[3], 6);
+            setRuleDlgId(&R_ARRAY[3], 0);
+            setRuleColor(&R_ARRAY[3], reset);
+            PLAYER.hasKey = 1;
         }
 
+        // go to room 3_4
+        if (compareCoords(PLAYER.dim.coord, createCoords(5, 57, 1, 2), 2))
+        {
+            CUR_ROOM = initRoom(ROOM3_4);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {5, 5};
+        }
+
+        // go to room 3_3
+        if (compareCoords(PLAYER.dim.coord, createCoords(3, 48, 3, 1), 3))
+        {
+            CUR_ROOM = initRoom(ROOM3_3);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {12, 57};
+        }
+
+        // go to room 3_2
+        if (compareCoords(PLAYER.dim.coord, createCoords(3, 20, 3, 1), 3))
+        {
+            CUR_ROOM = initRoom(ROOM3_2);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = (COORD) {14, 8};
+        }
+
+        break;
+
+        case ROOM3_2:
+        
+        // flag for wires
+        r3_2f = !r3_2f;
+
+        // logic for wires
+        if (r3_2f)
+        {
+            setRuleColor(&R_ARRAY[2], BBLU);
+            setRuleColType(&R_ARRAY[2], 5);
+            setRuleColor(&R_ARRAY[3], BBLU);
+            setRuleColType(&R_ARRAY[3], 5);
+    
+            setRuleColor(&R_ARRAY[6], RED);
+            setRuleColType(&R_ARRAY[6], 4);
+            setRuleColor(&R_ARRAY[7], RED);
+            setRuleColType(&R_ARRAY[7], 4);
+            setRuleColor(&R_ARRAY[10], RED);
+            setRuleColType(&R_ARRAY[10], 4);
+            setRuleColor(&R_ARRAY[11], RED);
+            setRuleColType(&R_ARRAY[11], 4);
+            setRuleColor(&R_ARRAY[12], RED);
+            setRuleColType(&R_ARRAY[12], 4);
+        }
+        else
+        {
+            setRuleColor(&R_ARRAY[3], RED);
+            setRuleColType(&R_ARRAY[3], 4);
+            setRuleColType(&R_ARRAY[2], 4);
+            setRuleColor(&R_ARRAY[2], RED);
+
+            setRuleColor(&R_ARRAY[6], BLU);
+            setRuleColType(&R_ARRAY[6], 5);
+            setRuleColor(&R_ARRAY[7], BLU);
+            setRuleColType(&R_ARRAY[7], 5);
+            setRuleColor(&R_ARRAY[10], BLU);
+            setRuleColType(&R_ARRAY[10], 5);
+            setRuleColor(&R_ARRAY[11], BLU);
+            setRuleColType(&R_ARRAY[11], 5);
+            setRuleColor(&R_ARRAY[12], BLU);
+            setRuleColType(&R_ARRAY[12], 5);
+        }
+
+        }
     }
     return 0;
 }

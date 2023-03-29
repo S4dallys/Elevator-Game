@@ -91,6 +91,38 @@ ROOM initRoom(int id)
             );
             break;
 
+        case ROOM3_1:
+            createRoom(&room,
+                "./maps/3-1.txt", "./maps/3-1r.txt", ROOM3_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {13, 31}, ROOM3_1
+            );
+            break;
+
+        case ROOM3_2:
+            createRoom(&room,
+                "./maps/3-2.txt", "./maps/3-2r.txt", ROOM3_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {13, 31}, ROOM3_2
+            );
+            break;
+
+        case ROOM3_3:
+            createRoom(&room,
+                "./maps/3-3.txt", "./maps/3-3r.txt", ROOM3_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {13, 31}, ROOM3_3
+            );
+            break;
+
+        case ROOM3_4:
+            createRoom(&room,
+                "./maps/3-4.txt", "./maps/3-4r.txt", ROOM3_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {13, 31}, ROOM3_4
+            );
+            break;
+
     }
 
 
