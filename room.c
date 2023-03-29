@@ -90,6 +90,14 @@ ROOM initRoom(int id)
                 (COORD) {17, 3}, ROOM2_3
             );
             break;
+        
+        case ELV2:
+            createRoom(&room,
+                "./maps/elv2.txt", "./maps/elv2r.txt", ROOM2_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, ELV2
+            );
+            break;
 
         case ROOM3_1:
             createRoom(&room,
