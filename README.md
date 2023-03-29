@@ -2,7 +2,7 @@
 INSERT GAME DESC  
 
 ## NOTES  
-To run main.c, type into bash:  
+To run main.c, type into console:  
 `./runMain.bat`  
 `./main.exe`
 
