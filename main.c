@@ -30,7 +30,7 @@ int main()
 
     int tempchar = getch();
 
-    ROOM CUR_ROOM = initRoom(ROOM5_1);
+    ROOM CUR_ROOM = initRoom(ROOM1_1);
     PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
     RULEARRAY R_ARRAY;
@@ -790,6 +790,9 @@ int main()
         if (compareCoords(PLAYER.dim.coord, createCoords(2, 38, 3, 1), 3))
         {
             textColor(RED);
+            printf("YOU JUMPED.\nPRESS ANY KEY TO QUIT.\n\n");
+            char tempchar = getch();
+            key = 'p';
             // end game
         }
 
@@ -798,7 +801,9 @@ int main()
         {
             CUR_ROOM = initRoom(NEW4);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {5, 35};
+            PLAYER.dim.coord = (COORD) {7, 35};
+
+            createDialogues(700, 3, DIALOGUES, &nDIALOGUES);
         }
 
         // 1
@@ -876,6 +881,8 @@ int main()
             CUR_ROOM = initRoom(NEW3);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = (COORD) {8, 67};
+
+            createDialogues(703, 2, DIALOGUES, &nDIALOGUES);
         }
 
         break;
@@ -887,6 +894,8 @@ int main()
             CUR_ROOM = initRoom(NEW2);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
             PLAYER.dim.coord = (COORD) {17, 94};
+
+            createDialogues(705, 1, DIALOGUES, &nDIALOGUES);
         }
 
         if (compareCoords(PLAYER.dim.coord, createCoords(8, 68, 1, 1), 1))
@@ -927,7 +936,10 @@ int main()
 
         if (compareCoords(PLAYER.dim.coord, createCoords(11, 35, 3, 1), 3))
         {
-
+            textColor(YEL);
+            printf("YOU LEAVE THE HOSPITAL.\nPRESS ANY KEY TO QUIT\n\n");
+            char tempchar = getch();
+            key = 'p';
         }
 
         }
