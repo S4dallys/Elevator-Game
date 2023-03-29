@@ -15,12 +15,12 @@ int r3_3a = 0;
 
 int main()
 {
-    ROOM CUR_ROOM = initRoom(ROOM2_1);
+    ROOM CUR_ROOM = initRoom(ROOM1_1);
     PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
     //DEBUG
     //
-    CUR_ROOM = initRoom(ROOM2_1);
+    CUR_ROOM = initRoom(ROOM1_1);
     // PLAYER.dim.coord = CUR_ROOM.default_pos;
     //
 

@@ -60,6 +60,8 @@
 154 HMM?
 155 Who are you and.. where am I?
 156 ...DON'T YOU ALREADY KNOW?
+// pre-1_4 red objects
+157 HEY, how did you know you can interact with this?
 //
 //
 // FLOOR 2

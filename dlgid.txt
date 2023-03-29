@@ -13,6 +13,8 @@
 // use for elevators (locked) !!
 109 149 150 0
 110 151 0
+// pre-1_4 red objects
+111 157 0
 // FLOOR 2
 200 200 201 202 203 204 205 206 0
 // use for keys!!
