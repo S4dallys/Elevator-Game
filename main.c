@@ -728,8 +728,6 @@ int main()
             r4_3a = 1;
         }
 
-        case ROOM4_3:
-
         if (compareCoords(PLAYER.dim.coord, createCoords(13, 21, 1, 1), 1))
         {
             setRuleColor(&R_ARRAY[18], reset);
