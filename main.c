@@ -16,12 +16,12 @@ int r4_3a = 0;
 int r4_3b = 0;
 int r4_4a = 0;
 int r4_4b = 0;
-int coin1 = 0, coin2 = 0, coin3 = 0, coin4 = 0, coin5 = 0;
 int r4_1a = 0;
 int r4_1b = 0;
 int r4_2a = 0;
 int r4_2b = 0;
 int r51 = 0, r52 = 0, r53 = 0, r54 = 0, r55 = 0, r56 = 0, r57 = 0, r58 = 0, r59 = 0;
+int n1 = 0, n2 = 0, n3 = 0, n4 = 0;
 
 int main()
 {
