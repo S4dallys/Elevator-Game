@@ -231,3 +231,57 @@
 446 Mark?
 447 THAT'S MY NAME...
 448 ... are you alright?
+500 "D4d! &^%!"
+501 Who is t*a}?
+502 "What d- y-u m@!n? It's me M%&#."
+503 I don't know you.
+504 "D%(?"
+505 M*@&, don't you und(r;t@nd?
+506 I can't do this an$%@re.
+507 There's n@t$i@#g you can do...
+508 ...to stop m&.
+509 "..."
+510 HEYA HEYA MAN! 
+511 YOU'RE NOT LO2K#@*G SO G%%D.
+512 M-Mark, where the f&$* am I>?
+513 ...
+514 YOU D^D TS&S Y!U K(!W
+515 M(*k hel& m(!
+516 ...
+517 I'M NOT REAL.
+518 FORGET ABOUT ME
+519 WHY ARE YOU ALWAYS LIKE THIS
+520 SINCE... 
+521 YOU JUST WERE..
+522 YOU WEREN'T EVEN THERE FOR M&()
+523 "Look out for him, will ya?"
+524 Of course.
+525 "Promise?"
+526 ..
+527 Does..
+528 Does it still count, Rachel;;?
+528 "(*$&*!!^&"
+529 "(*#$@)"
+530 "n^& d@*nT"
+531 I guess I am doing it after all..
+532 "p8^@he d8(nt"
+533 It'll be over soon, honey..
+534 I promise.
+535 "..."
+536 Protect him.
+537 "...."
+538 Why aren't you saying anything?
+539 "......."
+540 ANSWER ME!
+541 "Hm, will I?"
+542 "Will I answer the person who wasn't with us then?"
+543 N-No, that's not what happened.
+544 "Come on, even M*@& agrees-"
+545 "don't you?"
+546 W-Why? W-What did I do wrong?
+547 "..."
+600 "FIND THE KEY"
+601 "FIND THE KEY AND COME BACK"
+602 "This is the key to what you desire."
+603 "Choose wisely."
+604 The end?
