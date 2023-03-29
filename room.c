@@ -147,6 +147,77 @@ ROOM initRoom(int id)
             );
             break;
 
+        case ROOM4_2:
+            createRoom(&room,
+                "./maps/4-2.txt", "./maps/4-2r.txt", ROOM4_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, ROOM4_2
+            );
+            break;
+        
+        case ROOM4_3:
+            createRoom(&room,
+                "./maps/4-3.txt", "./maps/4-3r.txt", ROOM4_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, ROOM4_3
+            );
+            break;
+
+        case ROOM4_4:
+            createRoom(&room,
+                "./maps/4-4.txt", "./maps/4-4r.txt", ROOM4_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, ROOM4_4
+            );
+            break;
+
+        case ELV4:
+            createRoom(&room,
+                "./maps/elv4.txt", "./maps/elv4r.txt", ROOM4_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, ELV4
+            );
+            break;
+
+        case ROOM5_1:
+            createRoom(&room,
+                "./maps/5-1.txt", "./maps/5-1r.txt", ROOM5_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, ROOM5_1
+            );
+            break;
+
+        case NEW4:
+            createRoom(&room,
+                "./maps/new4.txt", "./maps/new4r.txt", ROOM5_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, NEW4
+            );
+            break;
+
+        case NEW3:
+            createRoom(&room,
+                "./maps/new3.txt", "./maps/new3r.txt", ROOM5_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, NEW3
+            );
+            break;
+
+        case NEW2:
+            createRoom(&room,
+                "./maps/new2.txt", "./maps/new2r.txt", ROOM5_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, NEW2
+            );
+            break;
+
+        case NEW1:
+            createRoom(&room,
+                "./maps/new1.txt", "./maps/new1r.txt", ROOM5_1,
+                createDim(0, 0, 100, 100),
+                (COORD) {6, 21}, NEW1
+            );
+            break;
     }
 
 
