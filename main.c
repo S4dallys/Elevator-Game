@@ -30,7 +30,7 @@ int main()
 
     int tempchar = getch();
 
-    ROOM CUR_ROOM = initRoom(ROOM1_1);
+    ROOM CUR_ROOM = initRoom(ROOM5_1);
     PLAYER PLAYER = createPlayer(CUR_ROOM.default_pos);
 
     RULEARRAY R_ARRAY;
@@ -651,108 +651,6 @@ int main()
 
         break;
 
-        case ROOM5_1:
-
-        // BAD ENDING
-        if (compareCoords(PLAYER.dim.coord, createCoords(4, 19, 1, 1), 1))
-        {
-            setRuleColType(&R_ARRAY[1], 6);
-            setRuleColor(&R_ARRAY[1], reset);
-            setRuleDlgId(&R_ARRAY[1], 503);
-
-            setRuleColType(&R_ARRAY[3], 6);
-            setRuleColor(&R_ARRAY[3], reset);
-            setRuleDlgId(&R_ARRAY[3], 0);
-
-            PLAYER.hasKey = 1;
-        }
-
-        // JUMP?
-        if (compareCoords(PLAYER.dim.coord, createCoords(2, 38, 3, 1), 3))
-        {
-            textColor(RED);
-            
-            printf("\n\nYOU JUMPED.\nPRESS ANY KEY TO QUIT GAME\n");
-            int tempchare = getch();
-            key = 'p';
-        }
-
-        // leave rooftop
-        if (eventNo == 501 && PLAYER.hasKey)
-        {
-            CUR_ROOM = initRoom(NEW4);
-            initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = CUR_ROOM.default_pos;
-        }
-
-        // 1
-        if (compareCoords(PLAYER.dim.coord, createCoords(14, 13, 55, 1), 55) && r51 == 0)
-        {
-            createDialogues(605, 3, DIALOGUES, &nDIALOGUES);
-            r51 = 1;
-        }
-
-        // 2
-        if (compareCoords(PLAYER.dim.coord, createCoords(13, 13, 55, 1), 55) && r52 == 0)
-        {
-            createDialogues(608, 5, DIALOGUES, &nDIALOGUES);
-            r52 = 1;
-        }
-
-        // 3
-        if (compareCoords(PLAYER.dim.coord, createCoords(12, 13, 55, 1), 55) && r53 == 0)
-        {
-            createDialogues(613, 5, DIALOGUES, &nDIALOGUES);
-            r53 = 1;
-        }
-
-        // 4
-        if (compareCoords(PLAYER.dim.coord, createCoords(11, 13, 55, 1), 55) && r54 == 0)
-        {
-            createDialogues(618, 4, DIALOGUES, &nDIALOGUES);
-            r54 = 1;
-        }
-
-        // 5
-        if (compareCoords(PLAYER.dim.coord, createCoords(10, 13, 55, 1), 55) && r55 == 0)
-        {
-            createDialogues(622, 3, DIALOGUES, &nDIALOGUES);
-            r55 = 1;
-        }
-
-        // 6
-        if (compareCoords(PLAYER.dim.coord, createCoords(9, 13, 55, 1), 55) && r56 == 0)
-        {
-            createDialogues(625, 2, DIALOGUES, &nDIALOGUES);
-            r56 = 1;
-        }
-
-        // 7
-        if (compareCoords(PLAYER.dim.coord, createCoords(8, 13, 55, 1), 55) && r57 == 0)
-        {
-            createDialogues(627, 2, DIALOGUES, &nDIALOGUES);
-            r57 = 1;
-        }
-
-        // 8
-        if (compareCoords(PLAYER.dim.coord, createCoords(7, 13, 55, 1), 55) && r58 == 0)
-        {
-            createDialogues(629, 1, DIALOGUES, &nDIALOGUES);
-            r58 = 1;
-        }
-
-        // 9
-        if (compareCoords(PLAYER.dim.coord, createCoords(6, 13, 55, 1), 55) && r59 == 0)
-        {
-            createDialogues(630, 1, DIALOGUES, &nDIALOGUES);
-            r59 = 1;
-
-            setRuleColType(&R_ARRAY[9], 1);
-            setRuleColor(&R_ARRAY[9], URED);
-        }
-
-        break;
-
         case ROOM4_3:
 
         // go to room 4_2
@@ -900,7 +798,7 @@ int main()
         {
             CUR_ROOM = initRoom(NEW4);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = CUR_ROOM.default_pos;
+            PLAYER.dim.coord = (COORD) {5, 35};
         }
 
         // 1
