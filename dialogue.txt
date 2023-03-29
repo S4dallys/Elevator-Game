@@ -86,6 +86,63 @@
 219 WELCOME TO FLOOR 2!
 220 I HOPE YOU'LL GET THE ANSWERS TO YOUR QUESTIONS...
 221 CATCH YA LATER!
+// toy mech 2_3
+222 Hehe, what a cute little robot, wonder what it's doing here
+223 PROBABLY ABANDONED BY ITS OWNER DON'T YOU THINK?
+224 I guess so, but why...
+225 You flipped the switch, expecting it to move, maybe dance a bit
+226 Instead, you see sparks flying and smoke rising
+227 Figures
+// beef stew 2_3
+228 WOW, WHAT IS THAT SMELL???
+229 Mmm, that smells really good
+230 And it's... beef stew?! Mark you like beef stew don't you?
+231 (Wait...how do I know he likes beef stew)
+232 YES IT'S MY ALL-TIME FAVORITE DISH
+233 I CAN GO ON AND ON ABOUT WHY IT'S THE BEST DISH EVER CREATED
+234 (That's strange...whatever I'll think about it later)
+// grand piano 2_3
+235 Woah!!! What's this giant grand piano doing here?
+236 YOU NEVER KNOW, MAYBE SOMEONE WILL FIND IT USEFUL
+237 Hmm, I HAVE missed playing the piano
+238 A few notes won't hurt now will it?
+239 WOW YOU'RE GOOD AT THIS? DO YOU PRACTICE?
+240 Yeah, I did for a while. Just so I can play for...
+241 FOR...?
+242 I don't really remember, for someone I guess.
+// window_body 2_1
+243 What's over he-, NOPE
+244 YIKES!!! ARE THEY STILL ALIVE???
+245 What do you think?
+// window_fire 2_1
+246 I wonder who started this fire...
+247 MAYBE IT WAS AN ACCIDENT?
+248 I hope
+// window_lamp 2_1
+249 That lamp looks really dangerous, I feel like it might explode any minute now
+250 BETTER STEP A BIT FURTHER AWAY FROM IT THE
+251 I guess so
+// window_monument 2_1
+252 WHAT'S THAT MOUND OF RUBBLE?
+253 ...
+254 That used to be a public monument
+255 OF WHAT?
+256 I also don't know
+// first window 2_2
+257 Nobody deserves this...
+// second window 2_2
+258 What a horrible sight...
+259 May his soul find peace.
+// third window 2_3
+260 That's a huge bonfire.
+261 But who the hell would camp here in this desolate wasteland?
+// elv2
+262 "So your son's condition is deteriorating, Mr. ---"
+263 "I'm afraid there's nothing we can do."
+264 W-Wait, is this a hospital...?
+265 I need help, something happened and-
+266 There's zombies... or- or something..
+267 "What are you talking about?"
 // FLOOR 3
 301 OH HEY! YOU BEAT THE MAZE!
 302 CONGRATULATIONS! YOU'RE OFFICIALLY AT THE HALFWAY MARK.
@@ -146,48 +203,6 @@
 356 Why can't I remember..?
 357 The circuit breaker looks destroyed..
 358 I guess I'll have to be careful.
-// toy mech 2_3
-222 Hehe, what a cute little robot, wonder what it's doing here
-223 PROBABLY ABANDONED BY ITS OWNER DON'T YOU THINK?
-224 I guess so, but why...
-225 You flipped the switch, expecting it to move, maybe dance a bit
-226 Instead, you see sparks flying and smoke rising
-227 Figures
-// beef stew 2_3
-228 WOW, WHAT IS THAT SMELL???
-229 Mmm, that smells really good
-230 And it's... beef stew?! Mark you like beef stew don't you?
-231 (Wait...how do I know he likes beef stew)
-232 YES IT'S MY ALL-TIME FAVORITE DISH
-233 I CAN GO ON AND ON ABOUT WHY IT'S THE BEST DISH EVER CREATED
-234 (That's strange...whatever I'll think about it later)
-// grand piano 2_3
-235 Woah!!! What's this giant grand piano doing here?
-236 YOU NEVER KNOW, MAYBE SOMEONE WILL FIND IT USEFUL
-237 Hmm, I HAVE missed playing the piano
-238 A few notes won't hurt now will it?
-239 WOW YOU'RE GOOD AT THIS? DO YOU PRACTICE?
-240 Yeah, I did for a while. Just so I can play for...
-241 FOR...?
-242 I don't really remember, for someone I guess.
-// window_body 2_1
-243 What's over he-, NOPE
-244 YIKES!!! ARE THEY STILL ALIVE???
-245 What do you think?
-// window_fire 2_1
-246 I wonder who started these...
-247 MAYBE IT WAS AN ACCIDENT?
-248 I hope
-// window_lamp 2_1
-249 That lamp looks really dangerous, I feel like it might explode any minute now
-250 BETTER STEP A BIT FURTHER AWAY FROM IT THEN
-251 I guess so
-// window_monument 2_1
-252 WHAT'S THAT MOUND OF RUBBLE?
-253 ...
-254 That used to be a public monument
-255 OF WHAT?
-256 I also don't know
 // picture frame floor 4
 422 A faint glint catches your eye
 423 You decided to investigate where the light is coming from
