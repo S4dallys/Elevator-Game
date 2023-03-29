@@ -288,6 +288,41 @@
 602 "This is the key to what you desire."
 603 "Choose wisely."
 604 The end?
+// 1
+605 DON'T YOU GET IT NOW?
+606 YOU KNOW WHO I AM DON'T YOU?
+607 ....Yes
+// 2
+608 You are my subconscious.
+609 You were never real.
+610 ...I thought I was going insane for a while there.
+611 ...AND MARK?
+612 My son, of course. 
+// 3
+613 I don't like you bearing his name, by the way.
+614 WELL I AM YOU, SO..
+615 Right..
+616 At the very least,
+617 I remember what I came here to do.
+// 4
+618 I TOLD YOU YOU WOULD UNDERSTAND WHEN YOU REACHED THE TOP.
+619 Yeah... 
+620 I came here to join them right?
+621 I wasn't there for them when they were alive, but I'm here now.
+// 5
+622 I CAN'T MAKE THE CHOICE FOR YOU.
+623 MARK AND RACHEL CAN'T SEE YOU RIGHT NOW.
+624 A little pessimistic are we..?
+// 6
+625 IS THIS THE END THEN?
+626 ...
+// 7
+627 PLEASE FIND THE KEY. 
+628 AND MAKE THE RIGHT CHOICE.
+// 8
+629 FOR THEM.
+// 9
+630 Rachel, Mark.... I-
 // Key1 4_3
 450 Yes, of course.
 451 How could I forget the reason I came to this place

@@ -302,20 +302,6 @@ int main()
             PLAYER.dim.coord = (COORD) {9, 84};
         }
 
-        break;
-
-        case ELV2:
-
-        if (eventNo == 200)
-        {
-            CUR_ROOM = initRoom(ROOM3_1);
-            initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = CUR_ROOM.default_pos;
-
-            PLAYER.hasKey = 0;
-
-            createDialogues(359, 5, DIALOGUES, &nDIALOGUES);
-        }
         // key of 2_3
         if (compareCoords(PLAYER.dim.coord, createCoords(8, 80, 1, 1), 1))
         {
@@ -332,6 +318,21 @@ int main()
             PLAYER.dim.coord = CUR_ROOM.default_pos;
 
             createDialogues(262, 6, DIALOGUES, &nDIALOGUES);
+        }
+
+        break;
+
+        case ELV2:
+
+        if (eventNo == 200)
+        {
+            CUR_ROOM = initRoom(ROOM3_1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            PLAYER.hasKey = 0;
+
+            createDialogues(359, 5, DIALOGUES, &nDIALOGUES);
         }
 
         break;
@@ -682,6 +683,72 @@ int main()
             PLAYER.dim.coord = CUR_ROOM.default_pos;
         }
 
+        // 1
+        if (compareCoords(PLAYER.dim.coord, createCoords(14, 13, 55, 1), 55) && r51 == 0)
+        {
+            createDialogues(605, 3, DIALOGUES, &nDIALOGUES);
+            r51 = 1;
+        }
+
+        // 2
+        if (compareCoords(PLAYER.dim.coord, createCoords(13, 13, 55, 1), 55) && r52 == 0)
+        {
+            createDialogues(608, 5, DIALOGUES, &nDIALOGUES);
+            r52 = 1;
+        }
+
+        // 3
+        if (compareCoords(PLAYER.dim.coord, createCoords(12, 13, 55, 1), 55) && r53 == 0)
+        {
+            createDialogues(613, 5, DIALOGUES, &nDIALOGUES);
+            r53 = 1;
+        }
+
+        // 4
+        if (compareCoords(PLAYER.dim.coord, createCoords(11, 13, 55, 1), 55) && r54 == 0)
+        {
+            createDialogues(618, 4, DIALOGUES, &nDIALOGUES);
+            r54 = 1;
+        }
+
+        // 5
+        if (compareCoords(PLAYER.dim.coord, createCoords(10, 13, 55, 1), 55) && r55 == 0)
+        {
+            createDialogues(622, 3, DIALOGUES, &nDIALOGUES);
+            r55 = 1;
+        }
+
+        // 6
+        if (compareCoords(PLAYER.dim.coord, createCoords(9, 13, 55, 1), 55) && r56 == 0)
+        {
+            createDialogues(625, 2, DIALOGUES, &nDIALOGUES);
+            r56 = 1;
+        }
+
+        // 7
+        if (compareCoords(PLAYER.dim.coord, createCoords(8, 13, 55, 1), 55) && r57 == 0)
+        {
+            createDialogues(627, 2, DIALOGUES, &nDIALOGUES);
+            r57 = 1;
+        }
+
+        // 8
+        if (compareCoords(PLAYER.dim.coord, createCoords(7, 13, 55, 1), 55) && r58 == 0)
+        {
+            createDialogues(629, 1, DIALOGUES, &nDIALOGUES);
+            r58 = 1;
+        }
+
+        // 9
+        if (compareCoords(PLAYER.dim.coord, createCoords(6, 13, 55, 1), 55) && r59 == 0)
+        {
+            createDialogues(630, 1, DIALOGUES, &nDIALOGUES);
+            r59 = 1;
+
+            setRuleColType(&R_ARRAY[9], 1);
+            setRuleColor(&R_ARRAY[9], URED);
+        }
+
         break;
 
         case ROOM4_3:
@@ -691,7 +758,7 @@ int main()
         {
             CUR_ROOM = initRoom(ROOM4_2);
             initRules(CUR_ROOM, R_ARRAY, &nRULES);
-            PLAYER.dim.coord = (COORD) {5, 55};
+            PLAYER.dim.coord = (COORD) {10, 26};
         }
 
         // go to room 4_4
@@ -746,6 +813,16 @@ int main()
             PLAYER.dim.coord = (COORD) {9, 30};
         }
 
+        // go to next floor
+        if (eventNo == 410 && PLAYER.hasKey)
+        {
+            CUR_ROOM = initRoom(ELV4);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            createDialogues(0, 1, DIALOGUES, &nDIALOGUES);
+        }
+
         if (compareCoords(PLAYER.dim.coord, createCoords(7, 32, 1, 1), 1))
         {
             setRuleColor(&R_ARRAY[3], reset);
@@ -776,6 +853,19 @@ int main()
             }
 
             r4_4b = 1;
+        }
+
+        break;
+
+        case ELV4:
+
+        if (eventNo == 500)
+        {
+        CUR_ROOM = initRoom(ROOM5_1);
+            initRules(CUR_ROOM, R_ARRAY, &nRULES);
+            PLAYER.dim.coord = CUR_ROOM.default_pos;
+
+            PLAYER.hasKey = 0;
         }
 
         break;

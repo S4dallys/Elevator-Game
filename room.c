@@ -183,7 +183,7 @@ ROOM initRoom(int id)
             createRoom(&room,
                 "./maps/5-1.txt", "./maps/5-1r.txt", ROOM5_1,
                 createDim(0, 0, 100, 100),
-                (COORD) {6, 21}, ROOM5_1
+                (COORD) {15, 40}, ROOM5_1
             );
             break;
 
