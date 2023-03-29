@@ -30,15 +30,8 @@ int main()
 
     //DEBUG
     //
-<<<<<<< HEAD
     CUR_ROOM = initRoom(ROOM4_4);
-=======
-<<<<<<< HEAD
-    CUR_ROOM = initRoom(ROOM5_1);
-=======
-    CUR_ROOM = initRoom(ROOM4_4);
->>>>>>> origin/wet-cat
->>>>>>> origin/sandallys
+
     // PLAYER.dim.coord = CUR_ROOM.default_pos;
     //
 
@@ -559,7 +552,6 @@ int main()
 
         break;
 
-<<<<<<< HEAD
         // go to room 4_2
         if (compareCoords(PLAYER.dim.coord, createCoords(4, 19, 3, 1), 3))
         {
@@ -577,8 +569,6 @@ int main()
         }
 
         if (compareCoords(PLAYER.dim.coord, createCoords(6, 13, 1, 1), 1))
-=======
->>>>>>> origin/sandallys
         case ROOM4_1:
 
         // key 1 (correct)
@@ -652,8 +642,6 @@ int main()
 
             PLAYER.hasKey = 0;
 
-<<<<<<< HEAD
-=======
             if (!r4_2a)
             {
                 createDialogues(523, 13, DIALOGUES, &nDIALOGUES);
@@ -732,7 +720,6 @@ int main()
 
             PLAYER.hasKey = 0;
 
->>>>>>> origin/sandallys
             if (r4_3a == 0)
             {
                 createDialogues(450, 15, DIALOGUES, &nDIALOGUES);
@@ -802,62 +789,7 @@ int main()
 
             r4_4b = 1;
         }
-
-<<<<<<< HEAD
-            if (!r4_2a)
-            {
-                createDialogues(523, 13, DIALOGUES, &nDIALOGUES);
-            }
-
-            r4_2a = 1;
-        }
-
-        // key 2
-        if (compareCoords(PLAYER.dim.coord, createCoords(10, 31, 1, 1), 1))
-        {
-            setRuleColor(&R_ARRAY[21], reset);
-            setRuleColType(&R_ARRAY[21], 6);
-            setRuleDlgId(&R_ARRAY[21], 0);
-
-            PLAYER.hasKey = 0;
-
-            if (!r4_2b)
-            {
-                createDialogues(536, 12, DIALOGUES, &nDIALOGUES);
-            }
-
-            r4_2b = 1;
-        }
-
         break;
-
-        case ROOM5_1:
-
-        // BAD ENDING
-        if (compareCoords(PLAYER.dim.coord, createCoords(4, 19, 1, 1), 1))
-        {
-            setRuleColType(&R_ARRAY[1], 6);
-            setRuleColor(&R_ARRAY[1], reset);
-            setRuleDlgId(&R_ARRAY[1], 503);
-
-            setRuleColType(&R_ARRAY[3], 6);
-            setRuleColor(&R_ARRAY[3], reset);
-            setRuleDlgId(&R_ARRAY[3], 0);
-
-            PLAYER.hasKey = 1;
-        }
-
-        // JUMP?
-        if (compareCoords(PLAYER.dim.coord, createCoords(2, 38, 3, 1), 3))
-        {
-            textColor(RED);
-            // end game
-        }
-
-=======
->>>>>>> origin/sandallys
-        break;
-
         }
     }
     return 0;
