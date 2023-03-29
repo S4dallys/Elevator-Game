@@ -551,8 +551,6 @@ int main()
 
         break;
 
-        case ROOM4_3:
-
         // go to room 4_2
         if (compareCoords(PLAYER.dim.coord, createCoords(4, 19, 3, 1), 3))
         {
@@ -643,7 +641,6 @@ int main()
 
             PLAYER.hasKey = 0;
 
-<<<<<<< HEAD
             if (r4_3a == 0)
             {
                 createDialogues(450, 15, DIALOGUES, &nDIALOGUES);
@@ -651,6 +648,8 @@ int main()
 
             r4_3a = 1;
         }
+
+        case ROOM4_3:
 
         if (compareCoords(PLAYER.dim.coord, createCoords(13, 21, 1, 1), 1))
         {
@@ -710,7 +709,6 @@ int main()
             r4_4b = 1;
         }
 
-=======
             if (!r4_2a)
             {
                 createDialogues(523, 13, DIALOGUES, &nDIALOGUES);
@@ -763,7 +761,6 @@ int main()
 
         break;
 
->>>>>>> origin/sandallys
         }
     }
     return 0;
