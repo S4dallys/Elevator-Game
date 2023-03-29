@@ -286,6 +286,9 @@
 495 I doubt you will find anything tasting better than these.
 496 ...I'D PASS.
 497 Alright...(that's strange of Mark)
+// Elev 4 wrong
+498 The elevator does not budge.
+499 Find another key!
 // Key1 4_1
 500 "D4d! &^%!"
 501 Who is t*a}?
