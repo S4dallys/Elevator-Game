@@ -1,0 +1,442 @@
+0    
+100 OH HEY THERE!
+101 OVER HERE!
+102 I'LL BE YOUR GUIDE FOR TODAY. MY NAME IS... MARK.
+103 AS YOU CAN PROBABLY TELL, THIS IS THE TUTORIAL.
+104 FIRST THINGS FIRST, USE WASD TO MOVE AROUND...
+105 SEE YOU IN THE NEXT ROOM!
+106 OH HEY, ME AGAIN...
+107 REMEMBER! RED = DEATH. YOU WONT RESTART THE WHOLE GAME, BUT YOU WILL RESTART YOUR FLOOR.
+108 SO DON'T DIE >:c
+109 OH YEAH, PERIODS ARE ALSO BAD.. 
+110 SINCE WE WEREN'T ALLOWED TO USE GRAPHICS FOR THE GAME JAM,
+111 PERIODS DENOTE LIKE CLIFFS AND HOLES IN THE GROUND! NOT GOOD!
+//
+// ROOM1_4 items
+112 It's an antique looking table set..
+113 Wait.. what's this note doing here?
+114 It says.. 
+115 "HAHA MADE YOU READ !!"
+116 "-MARK"
+117 ...
+// locked door DIALOGUES
+118 Is that... an elevator?
+119 It seems this gate is in the way.
+120 SORRY TO READ YOUR MIND BUT YUP. THAT'S A GATE.
+121 WE'RE GONNA HAVE TO FIND A SWITCH SOMEWHERE TO OPEN IT.
+122 WHY DON'T YOU INTERACT WITH MORE OF THE THINGS IN THE ROOM?
+123 I SUGGEST STARTING WITH THE TABLE ON THE LEFT!
+124 It's a golden key.
+125 Hey Mark.. what's this for?
+126 MMHF!
+127 ...?
+128 S-SORRY I WAS EATING CHICKEN.
+129 ...
+130 DON'T WORRY, YOU DON'T NEED TO EAT WHERE WE ARE RIGHT NOW.
+131 ANYWAY, THAT KEY IS FOR THE ELEVATOR OVER THERE.
+132 IT BRINGS YOU UP TO THE NEXT FLOOR. CLEAR 5 FLOORS AND YOU'RE FREE!
+133 FROM WHAT YOU ASK?
+134 YOU'LL SEE!
+135 DON'T FORGET TO PICK THIS UP. BYT HE WAY, IF YOU DIE YOU'LL HAVE TO GET THIS KEY AGAIN!
+136 Red is bad.. right?
+// lever and elevators
+137 It's a lever base.
+138 Nothing happened...
+139 OH THE GATE'S GONE!
+140 LET'S GO TO THE NEXT FLOOR!
+141 It's a puddle...
+142 I shouldn't step there.
+143 OH YEAH! ARE YOU TIRED OF WALKING AROUND?
+144 PRESS 'SHIFT' WHILE MOVING TO SPRINT.
+145 ALSO, PRESS 'E' TO INTERACT WITH ANYTHING COLORED!
+146 THAT IS IF YOU WANT TO PROGRESS...
+147 AND SOLVE THIS GAME'S MYSTERY!
+148 NOPE! NO GOING BACK!
+149 The elevaor is locked..
+150 I need to find a key.
+151 OOH! I'LL SEE YOU IN FLOOR 2!
+152 GOOD JOB COMPLETING THE TUTORIAL!
+153 W-Wait a sec..
+154 HMM?
+155 Who are you and.. where am I?
+156 ...DON'T YOU ALREADY KNOW?
+// pre-1_4 red objects
+157 HEY, how did you know you can interact with this?
+//
+//
+// FLOOR 2
+200 A broken cellphone.. looks familiar...
+201 Looks like it still has life in it.
+202 Let me try entering a random password..
+203 ..!!
+204 It worked!
+205 Must be my lucky da-
+206 Oh. it shut off.
+207 It's a golden key.
+208 Mark said this was important in climbing this building.
+209 This place smells a little like blood...
+// garden 2_3
+210 WOW! WHAT A HUGE GARDEN!
+211 Garden..?
+212 WELL, I GUESS IT'S MORE LIKE A MAZE OR A JUNGLE NOW. 
+213 PLACE HASN'T BEEN MAINTANED IN A WHILE.
+214 These are plants?
+215 Why are they red...?
+216 DUNNO!
+217 The elevator stopped working..
+218 I should move forward.
+219 WELCOME TO FLOOR 2!
+220 I HOPE YOU'LL GET THE ANSWERS TO YOUR QUESTIONS...
+221 CATCH YA LATER!
+// toy mech 2_3
+222 Hehe, what a cute little robot, wonder what it's doing here
+223 PROBABLY ABANDONED BY ITS OWNER DON'T YOU THINK?
+224 I guess so, but why...
+225 You flipped the switch, expecting it to move, maybe dance a bit
+226 Instead, you see sparks flying and smoke rising
+227 Figures
+// beef stew 2_3
+228 WOW, WHAT IS THAT SMELL???
+229 Mmm, that smells really good
+230 And it's... beef stew?! Mark you like beef stew don't you?
+231 (Wait...how do I know he likes beef stew)
+232 YES IT'S MY ALL-TIME FAVORITE DISH
+233 I CAN GO ON AND ON ABOUT WHY IT'S THE BEST DISH EVER CREATED
+234 (That's strange...whatever I'll think about it later)
+// grand piano 2_3
+235 Woah!!! What's this giant grand piano doing here?
+236 YOU NEVER KNOW, MAYBE SOMEONE WILL FIND IT USEFUL
+237 Hmm, I HAVE missed playing the piano
+238 A few notes won't hurt now will it?
+239 WOW YOU'RE GOOD AT THIS? DO YOU PRACTICE?
+240 Yeah, I did for a while. Just so I can play for...
+241 FOR...?
+242 I don't really remember, for someone I guess.
+// window_body 2_1
+243 What's over he-, NOPE
+244 YIKES!!! ARE THEY STILL ALIVE???
+245 What do you think?
+// window_fire 2_1
+246 I wonder who started this fire...
+247 MAYBE IT WAS AN ACCIDENT?
+248 I hope
+// window_lamp 2_1
+249 That lamp looks really dangerous, I feel like it might explode any minute now
+250 BETTER STEP A BIT FURTHER AWAY FROM IT
+251 I guess so
+// window_monument 2_1
+252 WHAT'S THAT MOUND OF RUBBLE?
+253 ...
+254 That used to be a public monument
+255 OF WHAT?
+256 I also don't know
+// first window 2_2
+257 Nobody deserves this...
+// second window 2_2
+258 What a horrible sight...
+259 May his soul find peace.
+// third window 2_3
+260 That's a huge bonfire.
+261 But who the hell would camp here in this desolate wasteland?
+// elv2
+262 "So your son's condition is deteriorating, Mr. ---"
+263 "I'm afraid there's nothing we can do."
+264 W-Wait, is this a hospital...?
+265 I need help, something happened and-
+266 There's zombies... or- or something..
+267 "What are you talking about?"
+// FLOOR 3
+301 OH HEY! YOU BEAT THE MAZE!
+302 CONGRATULATIONS! YOU'RE OFFICIALLY AT THE HALFWAY MARK.
+303 Hey... what exactly is going on?
+304 NOT EXACTLY SURE MYSELF...
+305 THOUGH IT'S DEFINITELY SOMETHING REALLY BAD :c
+306 ...
+307 I should keep going.
+308 It's a sofa.
+309 It look nice and comfy. 
+310 Hm? I think...
+311 I used to sit on one of these a lot with... 
+312 ...my family.
+313 Do I still have a family?
+314 Is this a water dispenser?
+315 Maybe I should take a drink.
+// forced dlg 1
+316 NO WAY.
+317 IS THAT ANOTHER PERSON?
+318 ...
+319 "h-hello"
+320 "are you a survivor, too?"
+321 "oh my god, I thought I was the only one left!"
+322 "hheeeheehee..."
+323 ...?
+324 Can you tell me what happened here? 
+325 I just woke up a couple hours ago and nothing makes sense.
+326 "ahh yes yes"
+327 "after you do something for me first!"
+328 "ii need you to find my green wallet somewhere in those rooms..."
+329 "i just want to see my kids' pictures again.."
+330 And then you'll tell me?
+331 "of course i will!"
+332 ...alright
+333 I think something happened!
+334 I need to watch out for these live wires..
+335 Looks like some of them are aren't always on..
+336 Looks like I found his wallet.
+337 W-what...
+338 These pictures...
+339 This can't be right...
+340 W-What just happened?
+341 I'm back here huh...
+342 ...
+343 That man is gone too..
+344 It's a bush.
+345 That's it.
+346 I'm a little bit scared to touch it since that red maze area...
+347 "I love you honey."
+348 Love you too.
+349 "I'll be taking the kids to the show later right?"
+350 Mhmm
+351 "Okay, you have fun at the meeting."
+352 Alright hone-
+353 ----------hnrgh
+354 W-What the hell? 
+355 A memory? Was that my wife? 
+356 Why can't I remember..?
+357 The circuit breaker looks destroyed..
+358 I guess I'll have to be careful.
+// picture frame floor 4
+422 A faint glint catches your eye
+423 You decided to investigate where the light is coming from
+424 As you get closer to the object, you start to realize what it is
+425 A rectangular picture frame, finished with smooth wooden edges
+426 A beam of light coming from outside, bouncing off the glass, bright enough to blind you
+427 The quality of the frame amazed you, what a beautiful piece of handiwork...
+428 if it weren't for the glaringly obvious crack across the glass screen
+429 However, these did not catch your attention, what caught your attention...
+430 was the picture itself: a family of four, smiling happily.
+431 How wholesome
+432 But upon closer inspection, you noticed something was off
+433 All but one of the members of the picture had vague and unclear facial features
+434 The only one with a clear and definite face was a tall, well-built man
+435 Most probably the father of the family
+436 Lost in thought, you unknowingly shifted the angle of the frame
+437 Looking back down onto the frame, you see a glimpse of somethi- no, someONE
+438 When the realization kicked in...
+439 panic
+440 Next thing you know, you're a good distance away from the picture frame,
+441 which now lying facedown on the ground
+442 You start to walk away, denying what you just saw
+443 But it's no use, you can't simply forget about it
+444 That is, seeing the tall, well-built man
+// 4_1 Opening
+445 HAH.. YOU'RE ALMOST THERE...
+446 Mark?
+447 THAT'S MY NAME...
+448 ... are you alright?
+// Key1 4_3
+450 Yes, of course.
+451 How could I forget the reason I came to this place
+452 There was an attack and...
+453 Yes, zombies, they wreaked havoc everywhere.
+454 I had to find a safehouse, away from danger.
+455 But for some reason...I can't seem to remember anything aside from that
+456 Hey Mark, what do you know about it? The outbreak?
+457 OUTBREAK?
+458 Yeah, the catastrophic zombie outbreak that caused worldwide panic,
+459 you know, the reason why we are here right now.
+460 ...
+461 FIRST TIME HEARING ABOUT THIS
+462 What do you mean? How can you not know about it? It's literally everywhere.
+463 (But now that I think about it, it is quite strange
+464 how I've never seen even a single zombie yet)
+// Key2 4_3
+465 How did I even end up here?
+466 Everything is so blurry right before I met Mark.
+467 I just found myself running, running...
+468 The problem is, what was I running away from?
+469 For starters, what even is this place?
+470 Hey Mark, where are we?
+471 YOU DON'T KNOW? WE'RE IN THE DISTRICT HOSPITAL.
+472 District hospital? That can't be possible.
+473 Didn't we see a life-sized maze a while ago? How can that be inside a hospital?
+474 WHAT MAZE? MAYBE YOU'RE SEEING THINGS.
+475 ...
+476 ...maybe.
+// Key1 4_4
+477 That TV...takes me back to the good old days.
+478 We used to huddle together on the couch and watch movies together.
+479 Wait..."we"? Who was I with? My family?
+480 Mark, do you know me? Do I have a family of my own?
+481 ...
+482 Mark? Are you there?
+483 ...
+484 Mark, are you not telling me something? Please, I need to know.
+485 ...
+486 Mark, I'm beg-
+487 SHUT UP, YOU DON'T NEED TO KNOW!
+488 I-... ok.
+// Key2 4_4
+489 Beef stew once again, but this smells different from the other one.
+490 There's no mistaking it, this is Rachel's recipe.
+491 Yes, Rachel, the love of my life.
+492 She cooks the best tasting beef stew, despite being vegetarian herself.
+493 But why...? Maybe it's for someone else.
+494 Anyways, Mark you've got to try these once you get the chance.
+495 I doubt you will find anything tasting better than these.
+496 ...I'D PASS.
+497 Alright...(that's strange of Mark)
+// Elev 4 wrong
+498 The elevator does not budge.
+499 Find another key!
+// Key1 4_1
+500 "D4d! &^%!"
+501 Who is t*a}?
+502 "What d- y-u m@!n? It's me M%&#."
+503 I don't know you.
+504 "D%(?"
+505 M*@&, don't you und(r;t@nd?
+506 I can't do this an$%@re.
+507 There's n@t$i@#g you can do...
+508 ...to stop m&.
+509 "..."
+510 HEYA HEYA MAN! 
+511 YOU'RE NOT LO2K#@*G SO G%%D.
+512 M-Mark, where the f&$* am I>?
+513 ...
+514 YOU D^D TS&S Y!U K(!W
+515 M(*k hel& m(!
+516 ...
+517 I'M NOT REAL.
+518 FORGET ABOUT ME
+519 WHY ARE YOU ALWAYS LIKE THIS
+520 SINCE... 
+521 YOU JUST WERE..
+522 YOU WEREN'T EVEN THERE FOR M&()
+523 "Look out for him, will ya?"
+524 Of course.
+525 "Promise?"
+526 ..
+527 Does..
+528 Does it still count, Rachel;;?
+528 "(*$&*!!^&"
+529 "(*#$@)"
+530 "n^& d@*nT"
+531 I guess I am doing it after all..
+532 "p8^@he d8(nt"
+533 It'll be over soon, honey..
+534 I promise.
+535 "..."
+536 Protect him.
+537 "...."
+538 Why aren't you saying anything?
+539 "......."
+540 ANSWER ME!
+541 "Hm, will I?"
+542 "Will I answer the person who wasn't with us then?"
+543 N-No, that's not what happened.
+544 "Come on, even M*@& agrees-"
+545 "don't you?"
+546 W-Why? W-What did I do wrong?
+547 "..."
+600 "FIND THE KEY"
+601 "FIND THE KEY AND COME BACK"
+602 "This is the key to what you desire."
+603 "Choose wisely."
+604 The end?
+// 1
+605 DON'T YOU GET IT NOW?
+606 YOU KNOW WHO I AM DON'T YOU?
+607 ....Yes
+// 2
+608 You are my subconscious.
+609 You were never real.
+610 ...I thought I was going insane for a while there.
+611 ...AND MARK?
+612 My son, of course. 
+// 3
+613 I don't like you bearing his name, by the way.
+614 WELL I AM YOU, SO..
+615 Right..
+616 At the very least,
+617 I remember what I came here to do.
+// 4
+618 I TOLD YOU YOU WOULD UNDERSTAND WHEN YOU REACHED THE TOP.
+619 Yeah... 
+620 I came here to join them right?
+621 I wasn't there for them when they were alive, but I'm here now.
+// 5
+622 I CAN'T MAKE THE CHOICE FOR YOU.
+623 MARK AND RACHEL CAN'T SEE YOU RIGHT NOW.
+624 A little pessimistic are we..?
+// 6
+625 IS THIS THE END THEN?
+626 ...
+// 7
+627 PLEASE FIND THE KEY. 
+628 AND MAKE THE RIGHT CHOICE.
+// 8
+629 FOR THEM.
+// 9
+630 Rachel, Mark.... I-
+// Key1 4_3
+450 Yes, of course.
+451 How could I forget the reason I came to this place
+452 There was an attack and...
+453 Yes, zombies, they wreaked havoc everywhere.
+454 I had to find a safehouse, away from danger.
+455 But for some reason...I can't seem to remember anything aside from that
+456 Hey Mark, what do you know about it? The outbreak?
+457 OUTBREAK?
+458 Yeah, the catastrophic zombie outbreak that caused worldwide panic,
+459 you know, the reason why we are here right now.
+460 ...
+461 FIRST TIME HEARING ABOUT THIS
+462 What do you mean? How can you not know about it? It's literally everywhere.
+463 (But now that I think about it, it is quite strange
+464 how I've never seen even a single zombie yet)
+// Key2 4_3
+465 How did I even end up here?
+466 Everything is so blurry right before I met Mark.
+467 I just found myself running, running...
+468 The problem is, what was I running away from?
+469 For starters, what even is this place?
+470 Hey Mark, where are we?
+471 YOU DON'T KNOW? WE'RE IN THE DISTRICT HOSPITAL.
+472 District hospital? That can't be possible.
+473 Didn't we see a life-sized maze a while ago? How can that be inside a hospital?
+474 WHAT MAZE? MAYBE YOU'RE SEEING THINGS.
+475 ...
+476 ...maybe.
+// Key1 4_4
+477 That TV...takes me back to the good old days.
+478 We used to huddle together on the couch and watch movies together.
+479 Wait..."we"? Who was I with? My family?
+480 Mark, do you know me? Do I have a family of my own?
+481 ...
+482 Mark? Are you there?
+483 ...
+484 Mark, are you not telling me something? Please, I need to know.
+485 ...
+486 Mark, I'm beg-
+487 SHUT UP, YOU DON'T NEED TO KNOW!
+488 I-... ok.
+// Key2 4_4
+489 Beef stew once again, but this smells different from the other one.
+490 There's no mistaking it, this is Rachel's recipe.
+491 Yes, Rachel, the love of my life.
+492 She cooks the best tasting beef stew, despite being vegetarian herself.
+493 But why...? Maybe it's for someone else.
+494 Anyways, Mark you've got to try these once you get the chance.
+495 I doubt you will find anything tasting better than these.
+496 ...I'D PASS.
+497 Alright...(that's strange of Mark)
+// 4
+700 I'm not jumping after all...
+701 GOOD FOR YOU!
+702 GOOD FOR ME.. I GUESS?
+// 3
+703 HEY.. LIVE FOR THEM.
+704 I will.
+// 2
+705 ...

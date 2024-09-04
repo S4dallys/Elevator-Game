@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "keypress.h": "c",
+        "e_string.h": "c",
+        "color.h": "c",
+        "rules.h": "c",
+        "stdio.h": "c",
+        "dim.h": "c",
+        "player.h": "c",
+        "room.h": "c",
+        "string.h": "c",
+        "main.h": "c"
+    }
+}
